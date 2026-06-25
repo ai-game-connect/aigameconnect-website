@@ -23,6 +23,6 @@ The site is static and GitHub Pages friendly. No framework, build system, backen
 
 ## Links
 
-- Homepage Dawrak CTAs point to `./dawrak/` and open in a new tab.
+- Homepage Dawrak CTAs point to `dawrak/index.html` and open in a new tab.
 - WhatsApp CTAs use `https://wa.me/201000520432`.
 - Partner CTAs stay on the homepage partner/contact sections until a dedicated intake flow is added.

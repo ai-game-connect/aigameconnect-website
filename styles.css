@@ -104,9 +104,28 @@ a {
   position: sticky;
   top: 0;
   z-index: 30;
+  overflow: hidden;
+  isolation: isolate;
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.84);
-  backdrop-filter: blur(18px);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.94), rgba(247, 251, 255, 0.86), rgba(255, 255, 255, 0.94));
+  box-shadow: 0 10px 32px rgba(16, 40, 73, 0.06);
+  backdrop-filter: blur(20px);
+  transition: background 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(110deg, transparent 0%, rgba(35, 200, 245, 0.12) 26%, transparent 52%),
+    linear-gradient(rgba(23, 107, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 107, 255, 0.035) 1px, transparent 1px);
+  background-size: 220% 100%, 54px 54px, 54px 54px;
+  opacity: 0.72;
+  animation: headerShine 12s ease-in-out infinite alternate;
 }
 
 .site-header::after {
@@ -115,11 +134,20 @@ a {
   inset-inline: 0;
   inset-block-end: -1px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(35, 200, 245, 0.65), transparent);
+  background: linear-gradient(90deg, transparent, rgba(35, 200, 245, 0.84), rgba(23, 107, 255, 0.7), transparent);
+  background-size: 180% 100%;
+  animation: headerLine 5.5s ease-in-out infinite alternate;
+}
+
+.site-header.is-scrolled {
+  border-color: rgba(23, 107, 255, 0.18);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 46px rgba(16, 40, 73, 0.12);
 }
 
 .nav {
-  min-height: 84px;
+  position: relative;
+  min-height: 96px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -133,9 +161,20 @@ a {
   min-width: 0;
 }
 
+.brand {
+  padding: 8px 0;
+  transition: transform 180ms ease;
+}
+
+.brand:hover,
+.brand:focus-visible {
+  transform: translateY(-1px);
+  outline: none;
+}
+
 .brand-logo {
   width: auto;
-  height: 54px;
+  height: 68px;
   object-fit: contain;
   opacity: 1;
 }
@@ -189,13 +228,23 @@ a {
 
 .nav-toggle {
   display: none;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.78);
   padding: 10px;
   box-shadow: 0 12px 30px rgba(16, 40, 73, 0.08);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(35, 200, 245, 0.42);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 16px 38px rgba(35, 200, 245, 0.16);
+  outline: none;
 }
 
 .nav-toggle span:not(.sr-only) {
@@ -361,6 +410,18 @@ a {
   transform: rotate(-35deg);
 }
 
+.hero-brand-watermark {
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  width: clamp(260px, 32vw, 480px);
+  height: auto;
+  opacity: 0.075;
+  transform: translateX(-50%) rotate(-4deg);
+  filter: drop-shadow(0 28px 60px rgba(23, 107, 255, 0.16));
+  animation: watermarkFloat 14s ease-in-out infinite alternate;
+}
+
 .glow-field {
   position: absolute;
   width: 38vw;
@@ -418,9 +479,22 @@ a {
 
 .hero-inner {
   position: relative;
+  isolation: isolate;
   padding: 132px 0 170px;
   text-align: center;
   animation: heroRise 760ms ease-out both;
+}
+
+.hero-inner::before {
+  content: "";
+  position: absolute;
+  inset: 76px 7% 118px;
+  z-index: -1;
+  border-radius: 8px;
+  background:
+    radial-gradient(ellipse at 50% 32%, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.36) 44%, transparent 72%),
+    linear-gradient(90deg, transparent, rgba(35, 200, 245, 0.08), transparent);
+  filter: blur(1px);
 }
 
 .eyebrow {
@@ -436,30 +510,55 @@ a {
   color: var(--blue);
 }
 
+.hero .eyebrow {
+  width: fit-content;
+  margin: 0 auto 20px;
+  padding: 8px 13px;
+  border: 1px solid rgba(23, 107, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 12px 34px rgba(16, 40, 73, 0.08);
+  backdrop-filter: blur(10px);
+}
+
 .hero h1 {
   margin: 0 auto;
-  max-width: 1010px;
+  max-width: 1080px;
   color: var(--ink);
-  font-size: 4.8rem;
-  line-height: 1.03;
+  font-size: clamp(3.7rem, 6.4vw, 5.55rem);
+  line-height: 0.99;
   font-weight: 950;
   letter-spacing: 0;
+  text-wrap: balance;
+  text-shadow: 0 18px 44px rgba(16, 40, 73, 0.14);
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .hero h1 {
+    background:
+      linear-gradient(115deg, #06182d 0%, #0d315e 45%, #176bff 78%, #06182d 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .hero-tagline {
-  margin: 24px auto 0;
-  max-width: 890px;
+  margin: 28px auto 0;
+  max-width: 920px;
   color: var(--ink-2);
-  font-size: 1.36rem;
-  line-height: 1.58;
-  font-weight: 800;
+  font-size: clamp(1.16rem, 1.7vw, 1.48rem);
+  line-height: 1.55;
+  font-weight: 850;
+  text-wrap: balance;
 }
 
 .hero-copy {
-  margin: 14px auto 0;
+  margin: 18px auto 0;
   max-width: 760px;
   color: var(--muted);
-  font-size: 1.08rem;
+  font-size: 1.1rem;
 }
 
 .hero-actions,
@@ -1152,9 +1251,39 @@ a {
   }
 }
 
+@keyframes watermarkFloat {
+  from {
+    transform: translateX(-50%) translateY(0) rotate(-4deg);
+  }
+
+  to {
+    transform: translateX(-50%) translateY(-12px) rotate(2deg);
+  }
+}
+
+@keyframes headerShine {
+  from {
+    background-position: 0% 50%, 0 0, 0 0;
+  }
+
+  to {
+    background-position: 100% 50%, 54px 0, 54px 0;
+  }
+}
+
+@keyframes headerLine {
+  from {
+    background-position: 0% 50%;
+  }
+
+  to {
+    background-position: 100% 50%;
+  }
+}
+
 @media (max-width: 1120px) {
   .brand-logo {
-    height: 48px;
+    height: 60px;
   }
 
   .hero h1 {
@@ -1185,12 +1314,12 @@ a {
   }
 
   .nav {
-    min-height: 74px;
+    min-height: 82px;
     align-items: center;
   }
 
   .brand-logo {
-    height: 42px;
+    height: 52px;
   }
 
   .nav-toggle {
@@ -1200,7 +1329,7 @@ a {
 
   .nav-links {
     position: absolute;
-    inset: 74px 15px auto;
+    inset: 82px 15px auto;
     display: grid;
     max-height: 0;
     overflow: hidden;
@@ -1284,7 +1413,7 @@ a {
 
 @media (max-width: 620px) {
   .brand-logo {
-    height: 38px;
+    height: 48px;
   }
 
   .footer-logo {
@@ -1329,6 +1458,12 @@ a {
     height: 130px;
     filter: blur(24px);
     opacity: 0.22;
+  }
+
+  .hero-brand-watermark {
+    top: 18%;
+    width: 280px;
+    opacity: 0.055;
   }
 
   .product-logo-lockup {

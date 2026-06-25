@@ -21,16 +21,16 @@ if (toggle && navLinks) {
   });
 }
 
-document.querySelectorAll('a[href="./dawrak/"][target="_blank"]').forEach((link) => {
-  link.addEventListener("click", (event) => {
-    if (window.location.protocol !== "file:") {
-      return;
-    }
+const header = document.querySelector(".site-header");
 
-    event.preventDefault();
-    window.open(new URL("./dawrak/index.html", window.location.href).href, "_blank", "noopener,noreferrer");
-  });
-});
+if (header) {
+  const updateHeaderState = () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 8);
+  };
+
+  updateHeaderState();
+  window.addEventListener("scroll", updateHeaderState, { passive: true });
+}
 
 document.querySelectorAll('a[href="../"]').forEach((link) => {
   link.addEventListener("click", (event) => {
