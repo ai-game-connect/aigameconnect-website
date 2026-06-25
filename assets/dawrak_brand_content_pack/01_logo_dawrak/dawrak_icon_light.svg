@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+        <rect width="100%" height="100%" fill="none"/>
+        
+    <g id="dawrak-icon">
+      <circle cx="256" cy="256" r="150" fill="#FF9A2E"/>
+      <path d="M 193.0 217.0
+               C 193.0 172.0, 248.5 157.0, 289.0 191.5
+               L 310.0 211.0
+               L 286.0 245.5
+               L 269.5 226.0
+               C 253.0 209.5, 232.0 214.0, 232.0 238.0
+               L 232.0 308.5
+               L 193.0 308.5
+               Z" fill="#071B33"/>
+      <circle cx="223.0" cy="337.0" r="15.8" fill="#071B33"/>
+      <circle cx="262.0" cy="337.0" r="15.8" fill="#071B33"/>
+      <circle cx="301.0" cy="337.0" r="15.8" fill="#071B33"/>
+      <circle cx="340.0" cy="337.0" r="15.8" fill="#FFF7EA"/>
+    </g>
+    
+        </svg>
