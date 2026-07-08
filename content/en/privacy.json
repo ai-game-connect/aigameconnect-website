@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "title": "Privacy Policy Placeholder | AI Game Connect",
+    "description": "A preview privacy policy placeholder explaining form data, external form providers, and pre-launch website behavior for AI Game Connect."
+  },
+  "hero": {
+    "eyebrow": "Privacy Policy",
+    "title": "Privacy Policy placeholder.",
+    "body": "This is an honest placeholder for the preview website. A full privacy policy will be published before public launch.",
+    "actions": [
+      { "label": "Register", "href": "/register/" },
+      { "label": "Back to Home", "href": "/", "variant": "btn-outline" }
+    ],
+    "visualCards": [
+      { "icon": "PD", "title": "Preview data", "body": "Forms are not connected here." },
+      { "icon": "FP", "title": "Form providers", "body": "May be used later." },
+      { "icon": "PL", "title": "Policy later", "body": "Full policy before launch." }
+    ]
+  },
+  "sections": [
+    {
+      "type": "legal",
+      "tone": "section-white",
+      "eyebrow": "Placeholder",
+      "title": "Preview privacy notes.",
+      "body": "This page is not a final legal policy.",
+      "blocks": [
+        {
+          "title": "Information that may be collected on forms",
+          "paragraphs": [
+            "Registration forms may ask for details such as name, WhatsApp number, city or area, preferred games or sports, availability, skill level, venue details, contact person, working hours, capacity, pricing details, and notes."
+          ]
+        },
+        {
+          "title": "No custom backend database in this preview",
+          "paragraphs": [
+            "This static preview website does not include a custom backend database. Form submissions are not stored by this website."
+          ]
+        },
+        {
+          "title": "External form tools may be connected later",
+          "paragraphs": [
+            "Registration forms may later connect to external tools such as Google Forms, Tally, or similar services. If external forms are used, submitted data may be handled by the selected form provider."
+          ]
+        },
+        {
+          "title": "Full policy before launch",
+          "paragraphs": [
+            "A complete privacy policy will be published before public launch and before any real data collection workflow is activated."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "tone": "section-soft",
+      "eyebrow": "FAQ",
+      "title": "Privacy questions.",
+      "body": "A quick clarification about this placeholder.",
+      "group": "privacy"
+    }
+  ]
+}

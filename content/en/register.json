@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Register | AI Game Connect",
+    "description": "Register interest as a Founding Player or Founding Venue Partner for the AI Game Connect preview community."
+  },
+  "hero": {
+    "eyebrow": "Register",
+    "title": "Join AI Game Connect.",
+    "body": "Choose your early access path and tell us what you want to play, host, track, or receive updates about.",
+    "actions": [
+      { "label": "Register as Player", "href": "#player" },
+      { "label": "Register Your Venue", "href": "#venue", "variant": "btn-outline" }
+    ],
+    "visualCards": [
+      { "icon": "PL", "title": "Register as Player", "body": "Register now as a Founding Player and get priority invites once matches launch in your area." },
+      { "icon": "VN", "title": "Register Your Venue", "body": "Founding Venue Partners get preferred visibility and early access to pricing before public launch." }
+    ]
+  },
+  "sections": [
+    {
+      "id": "registration-forms",
+      "type": "forms",
+      "tone": "section-white",
+      "eyebrow": "Questionnaire-style forms",
+      "title": "Player and venue registration previews.",
+      "body": "These forms do not store data in this static website. They show the questionnaire structure to connect to an external form before launch.",
+      "formKeys": ["player", "venue"]
+    },
+    {
+      "type": "badges",
+      "tone": "section-soft",
+      "eyebrow": "Safety Agreement Reminder",
+      "title": "Every registration path follows the same safety standards.",
+      "body": "The ecosystem is designed for healthy real-life competition in approved places only.",
+      "items": ["No betting", "No gambling", "No poker", "No private arrangements", "Approved venues, fields, and courts only", "Clear times", "Clear locations", "Clear rules"]
+    },
+    {
+      "type": "notice",
+      "tone": "section-blue",
+      "eyebrow": "Monetization FAQ Entry",
+      "title": "Is AI Game Connect free?",
+      "body": "Free to register and join the early player community. Venue costs, paid competitions, or future premium features will always be shown clearly before confirmation. Venue pricing will be shared after registration and review."
+    },
+    {
+      "type": "notice",
+      "tone": "section-white",
+      "eyebrow": "Confirmation / Placeholder Behavior",
+      "title": "Preview forms only.",
+      "body": "Thanks. This is a preview form. Connect an external form before launch. This static website does not store form data in a custom backend, localStorage, cookies, files, or a database. If external forms are later connected, submissions may be stored by the selected form provider."
+    },
+    {
+      "type": "faq",
+      "tone": "section-soft",
+      "eyebrow": "FAQ",
+      "title": "Registration questions.",
+      "body": "Important details before registering interest.",
+      "group": "register"
+    }
+  ]
+}

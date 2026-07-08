@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "title": "Blog | AI Game Connect",
+    "description": "Preview AI Game Connect blog updates covering game guides, tournaments, leaderboards, rewards, venues, safety, fair play, and community news."
+  },
+  "hero": {
+    "eyebrow": "Blog",
+    "title": "Updates for healthier real-life competition.",
+    "body": "Read preview guides and placeholder updates for the future AI Game Connect community.",
+    "actions": [
+      { "label": "Register", "href": "/register/" }
+    ],
+    "visualCards": [
+      { "icon": "GG", "title": "Game guides", "body": "Helpful future posts." },
+      { "icon": "TR", "title": "Tournaments", "body": "Competition updates." },
+      { "icon": "SF", "title": "Safety", "body": "Fair play standards." },
+      { "icon": "RW", "title": "Rewards", "body": "Coming soon." }
+    ]
+  },
+  "sections": [
+    {
+      "type": "blogGrid",
+      "tone": "section-white",
+      "eyebrow": "Featured Post",
+      "title": "How AI Game Connect can turn casual plans into organized play.",
+      "body": "A future story about moving from scattered group chats to clear requests, approved places, rankings, and rewards.",
+      "items": [
+        { "category": "Featured", "title": "From chat plans to real-life play", "body": "A placeholder feature about organizing safe, approved games with clear times and places.", "meta": "Preview feature" }
+      ]
+    },
+    {
+      "type": "filters",
+      "tone": "section-blue",
+      "eyebrow": "Category Filters",
+      "title": "Browse future post categories.",
+      "body": "Static filters only for this preview.",
+      "items": ["Game/sport guides", "Tournaments", "Leaderboard updates", "Rewards", "Venue spotlights", "Safety/fair play", "Community updates"]
+    },
+    {
+      "type": "blogGrid",
+      "tone": "section-white",
+      "eyebrow": "Post Grid",
+      "title": "Placeholder posts only.",
+      "body": "Real posts can be added before launch.",
+      "items": [
+        { "category": "Game/sport guides", "title": "Choosing the right activity for your first week", "body": "A future guide for new players choosing Football, Padel, Chess, and more.", "meta": "Preview post" },
+        { "category": "Tournaments", "title": "What makes a local tournament feel fair", "body": "A future article on rules, approved venues, and verified results.", "meta": "Preview post" },
+        { "category": "Leaderboard updates", "title": "Why rankings should reward consistency", "body": "A future note on fair ranking signals without fake live data.", "meta": "Preview post" },
+        { "category": "Rewards", "title": "Badges that celebrate showing up", "body": "A future post about recognition and healthy competition.", "meta": "Preview post" },
+        { "category": "Venue spotlights", "title": "How approved places can host better play", "body": "A future venue story about clear space, time, and rules.", "meta": "Preview post" },
+        { "category": "Safety/fair play", "title": "The rules that keep competition healthy", "body": "A future post about no betting, no gambling, and approved places only.", "meta": "Preview post" }
+      ]
+    },
+    {
+      "type": "notice",
+      "tone": "section-soft",
+      "eyebrow": "CTA to Register",
+      "title": "Join the early community.",
+      "body": "Register now to receive updates as the player and venue network grows.",
+      "cta": { "label": "Register", "href": "/register/" }
+    },
+    {
+      "type": "faq",
+      "tone": "section-white",
+      "eyebrow": "FAQ",
+      "title": "Blog questions.",
+      "body": "A quick note about the preview content.",
+      "group": "blog"
+    }
+  ]
+}

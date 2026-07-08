@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Terms of Use Placeholder | AI Game Connect",
+    "description": "A preview terms of use placeholder for AI Game Connect safety rules, approved places, and pre-launch website behavior."
+  },
+  "hero": {
+    "eyebrow": "Terms of Use",
+    "title": "Terms of Use placeholder.",
+    "body": "This is an honest placeholder for the preview website. Final terms will be published before launch.",
+    "actions": [
+      { "label": "Register", "href": "/register/" },
+      { "label": "Back to Home", "href": "/", "variant": "btn-outline" }
+    ],
+    "visualCards": [
+      { "icon": "RL", "title": "Clear rules", "body": "Preview safety standards." },
+      { "icon": "AV", "title": "Approved places", "body": "No private arrangements." },
+      { "icon": "PL", "title": "Final terms", "body": "Published before launch." }
+    ]
+  },
+  "sections": [
+    {
+      "type": "legal",
+      "tone": "section-white",
+      "eyebrow": "Placeholder",
+      "title": "Preview terms notes.",
+      "body": "This page is not a final legal document.",
+      "blocks": [
+        {
+          "title": "Safety rules",
+          "paragraphs": [
+            "AI Game Connect is designed for healthy real-life competition. The platform does not support betting, gambling, poker, private arrangements, or unsafe places."
+          ],
+          "items": ["No betting", "No gambling", "No poker", "No private arrangements", "Approved venues, fields, and courts only", "Clear times, locations, and rules"]
+        },
+        {
+          "title": "Pre-launch / preview mode",
+          "paragraphs": [
+            "This website is in pre-launch preview mode. It does not include real login, payments, live leaderboard profiles, live rewards, a custom backend, or a real chatbot."
+          ]
+        },
+        {
+          "title": "Final terms before launch",
+          "paragraphs": [
+            "Final Terms of Use will be published before public launch and before live account, competition, ranking, or reward features are activated."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "tone": "section-soft",
+      "eyebrow": "FAQ",
+      "title": "Terms questions.",
+      "body": "A quick clarification about this placeholder.",
+      "group": "terms"
+    }
+  ]
+}

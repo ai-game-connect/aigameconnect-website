@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "Dawrak | AI Game Connect",
+    "description": "Preview Dawrak, the AI Game Connect assistant being built to help players manage real-life game requests, venue details, rankings, and rewards."
+  },
+  "hero": {
+    "eyebrow": "Dawrak Assistant",
+    "title": "Dawrak is your AI assistant for real-life play.",
+    "body": "Dawrak is being built to help players request games, receive updates, discover approved venues, and follow rankings and rewards more easily.",
+    "actions": [
+      { "label": "Register to Use Dawrak", "href": "/register/" },
+      { "label": "See How It Works", "href": "#request-flow", "variant": "btn-outline" }
+    ],
+    "chat": {
+      "status": "Frontend mockup only",
+      "title": "Dawrak preview",
+      "messages": [
+        { "from": "bot", "text": "Tell me what you want to play, where, and when." },
+        { "from": "user", "text": "Padel in New Cairo this weekend." },
+        { "from": "bot", "text": "I can help prepare a request and show approved venue options when live." }
+      ]
+    }
+  },
+  "sections": [
+    {
+      "type": "cards",
+      "tone": "section-white",
+      "eyebrow": "What Dawrak Helps You Do",
+      "title": "One assistant for the practical parts of real-life play.",
+      "body": "Dawrak keeps the experience focused on clear requests, approved places, and useful updates.",
+      "columns": 3,
+      "items": [
+        { "icon": "RQ", "title": "Request a game", "body": "Describe the activity, area, preferred time, and skill level." },
+        { "icon": "IN", "title": "Receive requests", "body": "Hear about players looking for the same kind of match." },
+        { "icon": "PL", "title": "Find approved places", "body": "Get venue, field, or court details before confirmation." },
+        { "icon": "TM", "title": "Follow times", "body": "Receive dates and times for future competitions." },
+        { "icon": "RK", "title": "Track rank movement", "body": "See ranking movement after verified participation." },
+        { "icon": "RW", "title": "Receive reward updates", "body": "Get notified when badges and offers become available." }
+      ]
+    },
+    {
+      "id": "request-flow",
+      "type": "cards",
+      "tone": "section-blue",
+      "eyebrow": "Player Request Flow",
+      "title": "Dawrak is being built to help players manage requests and updates more easily.",
+      "body": "The flow is preview-only and does not create real matches from this website.",
+      "columns": 4,
+      "items": [
+        { "icon": "1", "title": "Share activity", "body": "Pick Football, Padel, Chess, PlayStation, Board games, Dominoes, or another safe activity." },
+        { "icon": "2", "title": "Share area", "body": "Choose the city or area where you want to play." },
+        { "icon": "3", "title": "Review options", "body": "See approved places and future request matches when available." },
+        { "icon": "4", "title": "Confirm later", "body": "Final confirmation will happen only after real tools are connected." }
+      ]
+    },
+    {
+      "type": "cards",
+      "tone": "section-white",
+      "eyebrow": "Notifications & Updates",
+      "title": "Helpful updates without pretending the system is live.",
+      "body": "Dawrak notifications shown here are examples of planned behavior.",
+      "columns": 3,
+      "items": [
+        { "icon": "GR", "title": "Game request update", "body": "A future update when players are looking for the same activity." },
+        { "icon": "EV", "title": "Competition reminder", "body": "A future reminder for dates, times, and approved venue details." },
+        { "icon": "RR", "title": "Reward notification", "body": "A future alert when rewards or badges become available." }
+      ]
+    },
+    {
+      "type": "cards",
+      "tone": "section-soft",
+      "eyebrow": "Venue / Location Support",
+      "title": "Approved locations stay central to the experience.",
+      "body": "Dawrak is designed around clear venues, fields, courts, and rules.",
+      "columns": 3,
+      "items": [
+        { "icon": "MAP", "title": "Location clarity", "body": "Players should know where they are going before confirming." },
+        { "icon": "OK", "title": "Approved places", "body": "Only reviewed venues, fields, and courts belong in the ecosystem." },
+        { "icon": "RL", "title": "Clear rules", "body": "Times, locations, and activity standards should be easy to understand." }
+      ]
+    },
+    {
+      "type": "cards",
+      "tone": "section-white",
+      "eyebrow": "Ranking & Rewards Updates",
+      "title": "Know when your activity starts to matter.",
+      "body": "Future Dawrak updates can make ranking movement and reward eligibility easier to follow.",
+      "columns": 3,
+      "items": [
+        { "icon": "RK", "title": "Ranking movement", "body": "Preview movement after verified participation." },
+        { "icon": "BD", "title": "Badge unlocks", "body": "Future badges for consistency, fair play, and activity." },
+        { "icon": "OF", "title": "Reward offers", "body": "Partner and venue updates when rewards launch." }
+      ]
+    },
+    {
+      "type": "chat",
+      "tone": "section-blue",
+      "eyebrow": "Example Chat Interface",
+      "title": "A frontend mockup only, no real backend.",
+      "body": "This preview shows the intended tone and flow without live chat logic.",
+      "chat": {
+        "status": "Preview",
+        "title": "Dawrak Assistant",
+        "messages": [
+          { "from": "bot", "text": "What would you like to play?" },
+          { "from": "user", "text": "Football, Thursday evening, around Maadi." },
+          { "from": "bot", "text": "When live, I can help prepare the request, suggest approved places, and send updates." }
+        ]
+      }
+    },
+    {
+      "type": "badges",
+      "tone": "section-white",
+      "eyebrow": "Safety Boundaries",
+      "title": "Dawrak supports clear and approved play only.",
+      "body": "The assistant concept follows the same safety standards as the platform.",
+      "items": ["Approved places only", "No betting", "No gambling", "No poker", "No private arrangements", "Clear time and location", "Clear rules", "Verified activity"]
+    },
+    {
+      "type": "notice",
+      "tone": "section-soft",
+      "eyebrow": "CTA to Register",
+      "title": "Register for early Dawrak access.",
+      "body": "Join as a player or venue partner now and receive updates as Dawrak features become available.",
+      "cta": { "label": "Register", "href": "/register/" }
+    },
+    {
+      "type": "faq",
+      "tone": "section-white",
+      "eyebrow": "FAQ",
+      "title": "Dawrak preview questions.",
+      "body": "Clear answers about what is planned and what is not live yet.",
+      "group": "dawrak"
+    }
+  ]
+}

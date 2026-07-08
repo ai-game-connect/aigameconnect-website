@@ -1,0 +1,48 @@
+{
+  "player": {
+    "kicker": "Player path",
+    "title": "Player Registration Form",
+    "body": "Tell us what you want to play, where you play, and how you want to participate.",
+    "foundingLine": "Register now as a Founding Player and get priority invites once matches launch in your area.",
+    "pricingLine": "Free to register and join the early player community. Any venue costs, paid competitions, or future premium features will be shown clearly before confirmation.",
+    "submitLabel": "Preview Player Registration",
+    "confirmation": "Thanks. This is a preview form. Connect an external form before launch.",
+    "fields": [
+      { "name": "full_name", "type": "text", "label": "Full name", "placeholder": "Your full name", "required": true },
+      { "name": "whatsapp", "type": "tel", "label": "WhatsApp number", "placeholder": "+20..." },
+      { "name": "city_area", "type": "text", "label": "City / area", "placeholder": "New Cairo, Maadi, Alexandria..." },
+      { "name": "age_range", "type": "select", "label": "Age range", "options": ["Select age range", "Under 18", "18-24", "25-34", "35-44", "45+"] },
+      { "name": "activities", "type": "checkboxGroup", "label": "Games / sports interested in", "options": ["Football", "Padel", "Board games", "PlayStation", "Chess", "Dominoes", "Other real-life activity"] },
+      { "name": "looking_to", "type": "checkboxGroup", "label": "I am looking to", "options": ["Request games", "Join games", "Compete", "Track ranking", "Get rewards"] },
+      { "name": "preferred_days", "type": "text", "label": "Preferred days", "placeholder": "Weekdays, weekends, specific days..." },
+      { "name": "preferred_time", "type": "text", "label": "Preferred time", "placeholder": "Morning, afternoon, evening..." },
+      { "name": "skill_level", "type": "select", "label": "Skill level", "options": ["Select skill level", "Beginner", "Casual", "Intermediate", "Advanced", "Competitive"] },
+      { "name": "notifications", "type": "checkboxGroup", "label": "Notification preferences", "options": ["WhatsApp updates", "Competition invites", "Ranking updates", "Reward updates"] },
+      { "name": "notes", "type": "textarea", "label": "Notes", "placeholder": "Anything we should know?", "rows": 4 }
+    ]
+  },
+  "venue": {
+    "kicker": "Venue path",
+    "title": "Venue Registration Form",
+    "body": "Share the details needed to review your venue as a future approved partner.",
+    "foundingLine": "Founding Venue Partners get preferred visibility and early access to pricing before public launch.",
+    "pricingLine": "Simple, transparent plans for venues — full pricing shared after you register your interest.",
+    "submitLabel": "Preview Venue Registration",
+    "confirmation": "Thanks. This is a preview form. Connect an external form before launch.",
+    "fields": [
+      { "name": "venue_name", "type": "text", "label": "Venue name", "placeholder": "Venue or club name", "required": true },
+      { "name": "venue_type", "type": "select", "label": "Venue type", "options": ["Select venue type", "Football field", "Padel court", "Board game cafe", "PlayStation venue", "Chess club", "Multi-activity venue", "Other approved place"] },
+      { "name": "city_area", "type": "text", "label": "City / area", "placeholder": "City and neighborhood" },
+      { "name": "maps_location", "type": "url", "label": "Google Maps location", "placeholder": "https://maps.google.com/..." },
+      { "name": "contact_person", "type": "text", "label": "Contact person", "placeholder": "Manager or owner name" },
+      { "name": "whatsapp", "type": "tel", "label": "WhatsApp number", "placeholder": "+20..." },
+      { "name": "available_activities", "type": "checkboxGroup", "label": "Available games / sports", "options": ["Football", "Padel", "Board games", "PlayStation", "Chess", "Dominoes", "Other real-life activity"] },
+      { "name": "working_hours", "type": "text", "label": "Working hours", "placeholder": "Example: 10 AM - 12 AM" },
+      { "name": "capacity", "type": "text", "label": "Capacity", "placeholder": "Courts, fields, tables, screens, or seats" },
+      { "name": "pricing_details", "type": "textarea", "label": "Pricing details", "placeholder": "Hourly rates, packages, or notes", "rows": 3 },
+      { "name": "host_competitions", "type": "select", "label": "Can host competitions?", "options": ["Select one", "Yes", "Maybe later", "No"] },
+      { "name": "safety_agreement", "type": "checkbox", "label": "I agree that the venue must follow the safety standards: no betting, no gambling, no poker, no private arrangements, approved activity spaces only.", "required": true },
+      { "name": "notes", "type": "textarea", "label": "Notes", "placeholder": "Anything else to review?", "rows": 4 }
+    ]
+  }
+}

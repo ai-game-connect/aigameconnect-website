@@ -1,0 +1,32 @@
+{
+  "tagline": "اتصل. نافس. ارتق في الترتيب. واحصل على مكافآت.",
+  "copyright": "موقع تعريفي تجريبي لمنصة AI Game Connect.",
+  "previewNote": "لا يوجد هنا نظام خلفي أو مدفوعات أو تسجيل دخول فعلي أو مساعد حي أو لوحة ترتيب مباشرة.",
+  "groups": [
+    {
+      "title": "استكشف",
+      "links": [
+        { "label": "الرئيسية", "href": "/" },
+        { "label": "دورك", "href": "/dawrak/" },
+        { "label": "لوحة الترتيب", "href": "/leaderboard/" },
+        { "label": "المكافآت", "href": "/rewards/" },
+        { "label": "المدونة", "href": "/blog/" },
+        { "label": "من نحن", "href": "/about/" }
+      ]
+    },
+    {
+      "title": "انضم",
+      "links": [
+        { "label": "التسجيل", "href": "/register/" },
+        { "label": "تسجيل الدخول", "href": "/signin/" }
+      ]
+    },
+    {
+      "title": "قانوني",
+      "links": [
+        { "label": "سياسة الخصوصية", "href": "/privacy/" },
+        { "label": "شروط الاستخدام", "href": "/terms/" }
+      ]
+    }
+  ]
+}

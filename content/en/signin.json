@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "title": "Sign In | AI Game Connect",
+    "description": "AI Game Connect sign-in access is coming soon. Register now for updates about player accounts, rankings, and rewards profiles."
+  },
+  "hero": {
+    "eyebrow": "Sign In",
+    "title": "Sign-in access is coming soon.",
+    "body": "Player accounts, rankings, and rewards profiles are coming soon. Register now and we'll notify you when sign-in access is available.",
+    "actions": [
+      { "label": "Register", "href": "/register/" },
+      { "label": "Back to Home", "href": "/", "variant": "btn-outline" }
+    ],
+    "visualCards": [
+      { "icon": "AC", "title": "Player accounts", "body": "Coming soon." },
+      { "icon": "RK", "title": "Rank profiles", "body": "Coming soon." },
+      { "icon": "RW", "title": "Rewards profiles", "body": "Coming soon." }
+    ]
+  },
+  "sections": [
+    {
+      "type": "signin",
+      "tone": "section-white",
+      "title": "Player accounts, rankings, and rewards profiles are coming soon.",
+      "body": "Register now and we'll notify you when sign-in access is available. No login form, password field, local storage, or authentication logic is active on this preview page.",
+      "actions": [
+        { "label": "Register", "href": "/register/" },
+        { "label": "Back to Home", "href": "/", "variant": "btn-outline" }
+      ]
+    }
+  ]
+}

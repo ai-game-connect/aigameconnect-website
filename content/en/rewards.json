@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "title": "Rewards | AI Game Connect",
+    "description": "Preview future AI Game Connect rewards, including badges, venue discounts, partner offers, leaderboard recognition, and seasonal rewards."
+  },
+  "hero": {
+    "eyebrow": "Rewards",
+    "title": "Compete, rank, and unlock rewards.",
+    "body": "Future rewards will connect real-life participation, leaderboard movement, badges, and partner offers in a safe approved-place ecosystem.",
+    "actions": [
+      { "label": "Register to Get Reward Updates", "href": "/register/" }
+    ],
+    "visualCards": [
+      { "icon": "VD", "title": "Venue discounts", "body": "Future partner value." },
+      { "icon": "BD", "title": "Badges", "body": "Player recognition." },
+      { "icon": "LB", "title": "Leaderboard rewards", "body": "Coming soon." },
+      { "icon": "CP", "title": "Competition prizes", "body": "Future events." },
+      { "icon": "PO", "title": "Partner offers", "body": "Trusted partners." },
+      { "icon": "SR", "title": "Seasonal rewards", "body": "Future campaigns." }
+    ]
+  },
+  "sections": [
+    {
+      "type": "steps",
+      "tone": "section-white",
+      "eyebrow": "How Rewards Work",
+      "title": "From joining to getting notified.",
+      "body": "The preview shows a future reward path without activating rewards today.",
+      "items": [
+        { "step": "1", "title": "Join", "body": "Register as an early player or venue partner." },
+        { "step": "2", "title": "Build activity", "body": "Participate in approved real-life games and competitions." },
+        { "step": "3", "title": "Move on leaderboards", "body": "Follow ranking movement after verified play." },
+        { "step": "4", "title": "Unlock badges", "body": "Earn future recognition for activity and fair play." },
+        { "step": "5", "title": "Get notified via Dawrak", "body": "Receive reward updates when the assistant launches." }
+      ]
+    },
+    {
+      "type": "cards",
+      "tone": "section-blue",
+      "eyebrow": "Reward Types",
+      "title": "Rewards that can grow with the network.",
+      "body": "Every reward type is future-facing and depends on approved partners and verified activity.",
+      "columns": 3,
+      "items": [
+        { "icon": "VD", "title": "Venue discounts", "body": "Future discounts from approved places." },
+        { "icon": "TP", "title": "Tournament prizes", "body": "Recognition or prizes for verified competitions." },
+        { "icon": "PO", "title": "Partner offers", "body": "Future offers from trusted partners." },
+        { "icon": "BD", "title": "Player badges", "body": "Recognition for activity, fair play, and consistency." },
+        { "icon": "LR", "title": "Leaderboard recognition", "body": "Highlighting progress and verified competition." },
+        { "icon": "SR", "title": "Seasonal rewards", "body": "Future campaigns as the community grows." }
+      ]
+    },
+    {
+      "type": "cards",
+      "tone": "section-white",
+      "eyebrow": "Player Badges",
+      "title": "Badges can make progress visible.",
+      "body": "The badge system is a preview concept, not a live profile feature yet.",
+      "columns": 4,
+      "items": [
+        { "icon": "FP", "title": "Fair Play", "body": "For players who respect clear rules." },
+        { "icon": "CS", "title": "Consistent Player", "body": "For steady approved participation." },
+        { "icon": "TM", "title": "Tournament Ready", "body": "For future competition participation." },
+        { "icon": "CM", "title": "Community Builder", "body": "For helping healthy play grow." }
+      ]
+    },
+    {
+      "type": "cards",
+      "tone": "section-soft",
+      "eyebrow": "Venue / Partner Rewards",
+      "title": "Rewards should help approved places grow too.",
+      "body": "Venue partners can use future rewards to bring players back in organized ways.",
+      "columns": 3,
+      "items": [
+        { "icon": "DS", "title": "Discount campaigns", "body": "Future offers tied to verified participation." },
+        { "icon": "EV", "title": "Event rewards", "body": "Rewards connected to approved competitions." },
+        { "icon": "VS", "title": "Venue spotlight", "body": "Recognition inside the ecosystem when available." }
+      ]
+    },
+    {
+      "type": "cards",
+      "tone": "section-white",
+      "eyebrow": "Leaderboard-Based Rewards",
+      "title": "Rewards can recognize progress, not just winning.",
+      "body": "Future rewards may reflect verified movement, consistency, fair play, and tournament participation.",
+      "columns": 3,
+      "items": [
+        { "icon": "UP", "title": "Rank movement", "body": "Recognition for meaningful progress." },
+        { "icon": "TOP", "title": "Top placements", "body": "Future recognition for strong verified performance." },
+        { "icon": "ST", "title": "Streaks", "body": "Future recognition for consistent approved activity." }
+      ]
+    },
+    {
+      "type": "notice",
+      "tone": "section-blue",
+      "eyebrow": "Coming Soon Disclaimer",
+      "title": "Rewards will launch gradually.",
+      "body": "Rewards will launch gradually as the player and venue network grows. Founding members get early access and bonus recognition. Register now to receive updates."
+    },
+    {
+      "type": "notice",
+      "tone": "section-soft",
+      "eyebrow": "CTA to Register",
+      "title": "Register now for reward updates.",
+      "body": "Choose player or venue registration and tell us what reward updates you want to receive.",
+      "cta": { "label": "Register", "href": "/register/" }
+    },
+    {
+      "type": "faq",
+      "tone": "section-white",
+      "eyebrow": "FAQ",
+      "title": "Rewards questions.",
+      "body": "Clear answers about what is coming later.",
+      "group": "rewards"
+    }
+  ]
+}

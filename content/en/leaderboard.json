@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Leaderboard | AI Game Connect",
+    "description": "Preview AI Game Connect rankings for Football, Padel, Chess, PlayStation, Board games, Dominoes, areas, and venues."
+  },
+  "hero": {
+    "eyebrow": "Leaderboard",
+    "title": "Track your progress. Climb the leaderboard.",
+    "body": "Future leaderboards will help players follow activity, verified participation, fair play, and ranking movement across the games they love.",
+    "actions": [
+      { "label": "Register to Track Your Rank", "href": "/register/" }
+    ],
+    "visualCards": [
+      { "icon": "#1", "title": "Player rank", "body": "Preview only." },
+      { "icon": "AR", "title": "Area rankings", "body": "Local progress." },
+      { "icon": "VN", "title": "Venue rankings", "body": "Approved places." },
+      { "icon": "FP", "title": "Fair play", "body": "Verified activity." },
+      { "icon": "RW", "title": "Rewards", "body": "Coming soon." },
+      { "icon": "BD", "title": "Badges", "body": "Recognition." }
+    ]
+  },
+  "sections": [
+    {
+      "type": "cards",
+      "tone": "section-white",
+      "eyebrow": "Ranking Categories",
+      "title": "Rankings across activities, areas, and venues.",
+      "body": "The preview covers the categories the platform is being designed to support.",
+      "columns": 4,
+      "items": [
+        { "icon": "FB", "title": "Football", "body": "Team and field-based ranking previews." },
+        { "icon": "PD", "title": "Padel", "body": "Court-based ranking previews." },
+        { "icon": "CH", "title": "Chess", "body": "Skill and consistency ranking previews." },
+        { "icon": "PS", "title": "PlayStation", "body": "Approved venue competition previews." },
+        { "icon": "BG", "title": "Board games", "body": "Community table ranking previews." },
+        { "icon": "DM", "title": "Dominoes", "body": "Organized table ranking previews." },
+        { "icon": "AR", "title": "Area rankings", "body": "Preview local leaderboards by city or area." },
+        { "icon": "VN", "title": "Venue rankings", "body": "Preview leaderboards connected to approved places." }
+      ]
+    },
+    {
+      "type": "leaderboard",
+      "tone": "section-soft",
+      "eyebrow": "Leaderboard Preview",
+      "title": "Preview only — live ranking profiles are coming soon.",
+      "body": "Sample rows show the planned structure without claiming live results.",
+      "headers": ["Rank", "Player", "Activity", "Area", "Points"],
+      "rows": [
+        ["#1", "Amina", "Padel", "New Cairo", "1,240"],
+        ["#2", "Youssef", "Football", "Maadi", "1,110"],
+        ["#3", "Omar", "Chess", "Nasr City", "980"],
+        ["#4", "Nour", "Board games", "Heliopolis", "860"],
+        ["#5", "Kareem", "Dominoes", "Alexandria", "790"]
+      ]
+    },
+    {
+      "type": "cards",
+      "tone": "section-white",
+      "eyebrow": "How Ranking May Work",
+      "title": "A fair ranking model will be published later.",
+      "body": "These are possible signals, not a final algorithm.",
+      "columns": 3,
+      "items": [
+        { "icon": "PT", "title": "Participation", "body": "Showing up to approved activities can matter." },
+        { "icon": "RS", "title": "Results", "body": "Verified results may support ranking movement." },
+        { "icon": "TR", "title": "Tournament results", "body": "Approved competitions may carry special weight." },
+        { "icon": "VA", "title": "Verified attendance", "body": "Confirmed presence helps avoid fake matches." },
+        { "icon": "FP", "title": "Fair play", "body": "Healthy competition and rule respect should matter." },
+        { "icon": "CS", "title": "Consistency", "body": "Regular approved activity may be recognized." }
+      ]
+    },
+    {
+      "type": "filters",
+      "tone": "section-blue",
+      "eyebrow": "Activity Filters",
+      "title": "Static filters for the preview.",
+      "body": "These controls show the future interface direction and do not filter live data yet.",
+      "items": ["All", "Football", "Padel", "Chess", "PlayStation", "Board games", "Dominoes", "Area", "Venue"]
+    },
+    {
+      "type": "cards",
+      "tone": "section-white",
+      "eyebrow": "Fair Play / Verification",
+      "title": "Rankings need trust before they need speed.",
+      "body": "The system is being designed around verified play and approved places.",
+      "columns": 4,
+      "items": [
+        { "icon": "VA", "title": "Verified activities", "body": "Activity should be connected to real play." },
+        { "icon": "AV", "title": "Approved venues", "body": "Ranked play belongs in approved places." },
+        { "icon": "CR", "title": "Confirmed results", "body": "Results should be confirmed before they matter." },
+        { "icon": "NF", "title": "No fake matches", "body": "The preview rejects ranking without real participation." }
+      ]
+    },
+    {
+      "type": "notice",
+      "tone": "section-soft",
+      "eyebrow": "CTA to Register",
+      "title": "Register now to be ready for ranking access.",
+      "body": "Player accounts, activity profiles, and live ranking movement are coming later.",
+      "cta": { "label": "Register", "href": "/register/" }
+    },
+    {
+      "type": "faq",
+      "tone": "section-white",
+      "eyebrow": "FAQ",
+      "title": "Leaderboard questions.",
+      "body": "The preview explains rankings without claiming a final live system.",
+      "group": "leaderboard"
+    }
+  ]
+}

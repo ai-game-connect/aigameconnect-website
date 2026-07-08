@@ -1,0 +1,21 @@
+{
+  "primaryLabel": "Main navigation",
+  "menuLabel": "Open navigation",
+  "languageToggle": {
+    "label": "Switch language",
+    "en": "EN",
+    "ar": "AR"
+  },
+  "links": [
+    { "page": "home", "label": "Home", "href": "/" },
+    { "page": "dawrak", "label": "Dawrak", "href": "/dawrak/" },
+    { "page": "leaderboard", "label": "Leaderboard", "href": "/leaderboard/" },
+    { "page": "rewards", "label": "Rewards", "href": "/rewards/" },
+    { "page": "blog", "label": "Blog", "href": "/blog/" },
+    { "page": "about", "label": "About Us", "href": "/about/" }
+  ],
+  "actions": {
+    "register": { "label": "Register", "href": "/register/", "variant": "btn-primary" },
+    "signin": { "label": "Sign In", "href": "/signin/", "variant": "btn-outline" }
+  }
+}

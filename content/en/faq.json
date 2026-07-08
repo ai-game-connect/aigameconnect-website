@@ -1,0 +1,104 @@
+{
+  "home": [
+    {
+      "question": "Is AI Game Connect free?",
+      "answer": "Free to register and join the early player community. Venue costs, paid competitions, or future premium features will always be shown clearly before confirmation. Venue pricing will be shared after registration and review."
+    },
+    {
+      "question": "Are matches and rankings live now?",
+      "answer": "This website is a preview. Real matching, player profiles, rankings, rewards, and Dawrak notifications are coming later."
+    },
+    {
+      "question": "What places are allowed?",
+      "answer": "AI Game Connect is designed for approved venues, fields, and courts only. No private arrangements are part of the preview."
+    }
+  ],
+  "dawrak": [
+    {
+      "question": "Is Dawrak a real chatbot on this site?",
+      "answer": "No. The chat interface is a frontend mockup only. It shows the intended experience without a backend or live AI assistant."
+    },
+    {
+      "question": "What will Dawrak help with?",
+      "answer": "Dawrak is being built to help players request games, receive requests, get venue details, follow competition times, and receive ranking or reward updates."
+    },
+    {
+      "question": "Will Dawrak support unsafe play?",
+      "answer": "No. Dawrak is designed around approved places, clear rules, and no betting, gambling, poker, or private arrangements."
+    }
+  ],
+  "leaderboard": [
+    {
+      "question": "Is this a live leaderboard?",
+      "answer": "No. The leaderboard is preview-only. Live rankings and player profiles are coming soon."
+    },
+    {
+      "question": "How will ranking work?",
+      "answer": "Ranking may consider participation, results, verified attendance, fair play, consistency, and tournament outcomes. The final algorithm is not published yet."
+    },
+    {
+      "question": "Can fake matches count?",
+      "answer": "The platform is being designed around verified activities, approved venues, and confirmed results."
+    }
+  ],
+  "rewards": [
+    {
+      "question": "Are rewards available now?",
+      "answer": "Rewards are coming soon and will launch gradually as the player and venue network grows."
+    },
+    {
+      "question": "What kinds of rewards may appear?",
+      "answer": "Future rewards may include venue discounts, tournament prizes, partner offers, player badges, leaderboard recognition, and seasonal rewards."
+    },
+    {
+      "question": "How do I get reward updates?",
+      "answer": "Register for the early community and choose your notification preferences on the registration page."
+    }
+  ],
+  "blog": [
+    {
+      "question": "Are these real articles?",
+      "answer": "The posts are placeholders for the preview website. Real articles and updates can be added before public launch."
+    },
+    {
+      "question": "What will the blog cover?",
+      "answer": "Game and sport guides, tournaments, leaderboard updates, rewards, venue spotlights, safety, fair play, and community news."
+    }
+  ],
+  "about": [
+    {
+      "question": "Who is AI Game Connect for?",
+      "answer": "It is for players who want safer real-life competition and approved venues that want organized, trusted player demand."
+    },
+    {
+      "question": "What is the long-term vision?",
+      "answer": "To make real-life games and sports easier to discover, safer to join, more competitive, and more rewarding."
+    }
+  ],
+  "register": [
+    {
+      "question": "Is AI Game Connect free?",
+      "answer": "Free to register and join the early player community. Venue costs, paid competitions, or future premium features will always be shown clearly before confirmation. Venue pricing will be shared after registration and review."
+    },
+    {
+      "question": "Where does my form data go?",
+      "answer": "This preview site does not store submissions. Connect an external form provider before launch if real collection is needed."
+    },
+    {
+      "question": "Can I register as both player and venue?",
+      "answer": "Yes. Use the player questionnaire for personal interest and the venue questionnaire for a place that wants to join as a partner."
+    }
+  ],
+  "privacy": [
+    {
+      "question": "Is this a final privacy policy?",
+      "answer": "No. This is a placeholder preview. A full policy should be published before public launch."
+    }
+  ],
+  "terms": [
+    {
+      "question": "Are these final terms?",
+      "answer": "No. These are placeholder terms for preview mode. Final terms should be published before launch."
+    }
+  ]
+}

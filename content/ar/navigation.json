@@ -1,0 +1,21 @@
+{
+  "primaryLabel": "التنقل الرئيسي",
+  "menuLabel": "فتح القائمة",
+  "languageToggle": {
+    "label": "تغيير اللغة",
+    "en": "EN",
+    "ar": "AR"
+  },
+  "links": [
+    { "page": "home", "label": "الرئيسية", "href": "/" },
+    { "page": "dawrak", "label": "دورك", "href": "/dawrak/" },
+    { "page": "leaderboard", "label": "لوحة الترتيب", "href": "/leaderboard/" },
+    { "page": "rewards", "label": "المكافآت", "href": "/rewards/" },
+    { "page": "blog", "label": "المدونة", "href": "/blog/" },
+    { "page": "about", "label": "من نحن", "href": "/about/" }
+  ],
+  "actions": {
+    "register": { "label": "التسجيل", "href": "/register/", "variant": "btn-primary" },
+    "signin": { "label": "تسجيل الدخول", "href": "/signin/", "variant": "btn-outline" }
+  }
+}

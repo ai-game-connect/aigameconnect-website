@@ -1,0 +1,48 @@
+{
+  "player": {
+    "kicker": "مسار اللاعب",
+    "title": "نموذج تسجيل اللاعب",
+    "body": "اخبرنا ماذا تريد أن تلعب، أين تلعب، وكيف تريد المشاركة.",
+    "foundingLine": "سجل الآن كلاعب مؤسس واحصل على أولوية الدعوات عندما تبدأ المباريات في منطقتك.",
+    "pricingLine": "التسجيل والانضمام للمجتمع المبكر مجاني. وأي تكلفة خاصة بالمكان أو بطولة أو ميزة إضافية مستقبلا ستكون واضحة قبل التأكيد.",
+    "submitLabel": "معاينة تسجيل اللاعب",
+    "confirmation": "شكرا لك. هذا نموذج معاينة فقط. يجب ربط نموذج خارجي قبل الإطلاق.",
+    "fields": [
+      { "name": "full_name", "type": "text", "label": "الاسم الكامل", "placeholder": "اكتب اسمك الكامل", "required": true },
+      { "name": "whatsapp", "type": "tel", "label": "رقم واتساب", "placeholder": "+20..." },
+      { "name": "city_area", "type": "text", "label": "المدينة / المنطقة", "placeholder": "القاهرة الجديدة، المعادي، الإسكندرية..." },
+      { "name": "age_range", "type": "select", "label": "الفئة العمرية", "options": ["اختر الفئة العمرية", "أقل من 18", "18-24", "25-34", "35-44", "45+"] },
+      { "name": "activities", "type": "checkboxGroup", "label": "الألعاب / الرياضات المهتم بها", "options": ["كرة القدم", "بادل", "ألعاب الطاولة", "PlayStation", "شطرنج", "دومينو", "نشاط واقعي آخر"] },
+      { "name": "looking_to", "type": "checkboxGroup", "label": "أرغب في", "options": ["طلب ألعاب", "الانضمام لألعاب", "المنافسة", "متابعة الترتيب", "الحصول على مكافآت"] },
+      { "name": "preferred_days", "type": "text", "label": "الأيام المفضلة", "placeholder": "أيام الأسبوع، عطلة نهاية الأسبوع، أيام محددة..." },
+      { "name": "preferred_time", "type": "text", "label": "الوقت المفضل", "placeholder": "صباحا، عصرا، مساء..." },
+      { "name": "skill_level", "type": "select", "label": "مستوى المهارة", "options": ["اختر مستوى المهارة", "مبتدئ", "هاو", "متوسط", "متقدم", "تنافسي"] },
+      { "name": "notifications", "type": "checkboxGroup", "label": "تفضيلات الإشعارات", "options": ["تحديثات واتساب", "دعوات المنافسات", "تحديثات الترتيب", "تحديثات المكافآت"] },
+      { "name": "notes", "type": "textarea", "label": "ملاحظات", "placeholder": "أي شيء تريد إضافته؟", "rows": 4 }
+    ]
+  },
+  "venue": {
+    "kicker": "مسار المكان",
+    "title": "نموذج تسجيل المكان",
+    "body": "شارك التفاصيل المطلوبة لمراجعة المكان كشريك معتمد مستقبلا.",
+    "foundingLine": "شركاء الأماكن المؤسسون يحصلون على ظهور مفضل ووصول مبكر لتفاصيل الأسعار قبل الإطلاق العام.",
+    "pricingLine": "خطط الأماكن ستكون بسيطة وواضحة، وتفاصيل الأسعار ستتم مشاركتها بعد تسجيل المكان ومراجعته.",
+    "submitLabel": "معاينة تسجيل المكان",
+    "confirmation": "شكرا لك. هذا نموذج معاينة فقط. يجب ربط نموذج خارجي قبل الإطلاق.",
+    "fields": [
+      { "name": "venue_name", "type": "text", "label": "اسم المكان", "placeholder": "اسم المكان أو النادي", "required": true },
+      { "name": "venue_type", "type": "select", "label": "نوع المكان", "options": ["اختر نوع المكان", "ملعب كرة قدم", "ملعب بادل", "مقهى ألعاب طاولة", "مكان PlayStation", "نادي شطرنج", "مكان متعدد الأنشطة", "مكان معتمد آخر"] },
+      { "name": "city_area", "type": "text", "label": "المدينة / المنطقة", "placeholder": "المدينة والحي" },
+      { "name": "maps_location", "type": "url", "label": "موقع Google Maps", "placeholder": "https://maps.google.com/..." },
+      { "name": "contact_person", "type": "text", "label": "الشخص المسؤول", "placeholder": "اسم المدير أو المالك" },
+      { "name": "whatsapp", "type": "tel", "label": "رقم واتساب", "placeholder": "+20..." },
+      { "name": "available_activities", "type": "checkboxGroup", "label": "الألعاب / الرياضات المتاحة", "options": ["كرة القدم", "بادل", "ألعاب الطاولة", "PlayStation", "شطرنج", "دومينو", "نشاط واقعي آخر"] },
+      { "name": "working_hours", "type": "text", "label": "ساعات العمل", "placeholder": "مثال: 10 صباحا - 12 منتصف الليل" },
+      { "name": "capacity", "type": "text", "label": "السعة", "placeholder": "ملاعب، كورتات، طاولات، شاشات، أو مقاعد" },
+      { "name": "pricing_details", "type": "textarea", "label": "تفاصيل الأسعار", "placeholder": "سعر الساعة، الباقات، أو ملاحظات", "rows": 3 },
+      { "name": "host_competitions", "type": "select", "label": "هل يمكن استضافة مسابقات؟", "options": ["اختر إجابة", "نعم", "ربما لاحقا", "لا"] },
+      { "name": "safety_agreement", "type": "checkbox", "label": "أوافق أن المكان يجب أن يلتزم بمعايير السلامة: لا مراهنات، لا قمار، لا بوكر، لا ترتيبات خاصة، وأنشطة في مساحات معتمدة فقط.", "required": true },
+      { "name": "notes", "type": "textarea", "label": "ملاحظات", "placeholder": "أي شيء آخر للمراجعة؟", "rows": 4 }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "tagline": "Connect. Compete. Rank. Get Rewarded.",
+  "copyright": "Preview website for AI Game Connect.",
+  "previewNote": "No backend, payments, live login, live chatbot, or live leaderboard is active here.",
+  "groups": [
+    {
+      "title": "Explore",
+      "links": [
+        { "label": "Home", "href": "/" },
+        { "label": "Dawrak", "href": "/dawrak/" },
+        { "label": "Leaderboard", "href": "/leaderboard/" },
+        { "label": "Rewards", "href": "/rewards/" },
+        { "label": "Blog", "href": "/blog/" },
+        { "label": "About Us", "href": "/about/" }
+      ]
+    },
+    {
+      "title": "Join",
+      "links": [
+        { "label": "Register", "href": "/register/" },
+        { "label": "Sign In", "href": "/signin/" }
+      ]
+    },
+    {
+      "title": "Legal",
+      "links": [
+        { "label": "Privacy Policy", "href": "/privacy/" },
+        { "label": "Terms of Use", "href": "/terms/" }
+      ]
+    }
+  ]
+}

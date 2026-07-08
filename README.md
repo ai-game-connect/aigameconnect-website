@@ -1,28 +1,24 @@
 # AI Game Connect Website
 
-Main static website for AI Game Connect.
+Static bilingual preview site for AI Game Connect.
 
-AI Game Connect is the parent company: an AI automation and gaming innovation brand for real-life gaming communities, venue networks, rankings, competitions, and smart operations.
+## Routes
 
-Dawrak / دورك is the first product under AI Game Connect. It focuses on real-life player matchmaking in approved venues.
+- `/`
+- `/dawrak/`
+- `/leaderboard/`
+- `/rewards/`
+- `/blog/`
+- `/about/`
+- `/register/`
+- `/signin/`
+- `/privacy/`
+- `/terms/`
 
-Senet is the competition and tournament system under AI Game Connect. It starts with local and area competitions, then grows toward larger tournament experiences.
+## Notes
 
-## Site Structure
-
-- `index.html` - AI Game Connect homepage
-- `styles.css` - AI Game Connect visual system
-- `script.js` - menu, reveal motion, and local preview behavior
-- `dawrak/index.html` - Dawrak product page
-- `dawrak/dawrak.css` - Dawrak product visual system
-- `assets/` - AI Game Connect and Dawrak brand assets
-
-## Publishing
-
-The site is static and GitHub Pages friendly. No framework, build system, backend, database, CRM, or account system is required.
-
-## Links
-
-- Homepage Dawrak CTAs point to `dawrak/index.html` and open in a new tab.
-- WhatsApp CTAs use `https://wa.me/201000520432`.
-- Partner CTAs stay on the homepage partner/contact sections until a dedicated intake flow is added.
+- English and Arabic content lives in `content/en` and `content/ar`.
+- The language toggle uses `?lang=ar` for Arabic and the default route for English.
+- Forms are frontend-only previews and do not store submissions.
+- There is no backend, database, payment flow, live login, live leaderboard, or real chatbot in this build.
+- Privacy and Terms are linked from the footer only.
