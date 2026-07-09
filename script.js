@@ -1,4 +1,26 @@
 (function () {
+  const normalizeBase = (value) => {
+    if (!value || value === "./") return "/";
+    return value.endsWith("/") ? value : `${value}/`;
+  };
+  const configuredBase = typeof __AIGC_BASE__ !== "undefined" ? __AIGC_BASE__ : "/";
+  const basePath = normalizeBase(configuredBase);
+  const withBase = (path) => {
+    if (!path || path.startsWith("#") || path.startsWith("mailto:") || path.startsWith("tel:")) {
+      return path;
+    }
+    if (/^[a-z][a-z\d+.-]*:/i.test(path)) {
+      return path;
+    }
+    if (basePath !== "/" && path.startsWith(basePath)) {
+      return path;
+    }
+    if (path.startsWith("/")) {
+      return `${basePath}${path.slice(1)}`;
+    }
+    return `${basePath}${path}`;
+  };
+
   const pageKey = document.body.dataset.page || "home";
   const supportedLanguages = ["en", "ar"];
   const params = new URLSearchParams(window.location.search);
@@ -38,7 +60,7 @@
     if (!href || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:")) {
       return href;
     }
-    const url = new URL(href, window.location.origin);
+    const url = new URL(withBase(href), window.location.origin);
     if (language === "ar") {
       url.searchParams.set("lang", "ar");
     } else {
@@ -65,7 +87,7 @@
   };
 
   const loadJson = async (name) => {
-    const response = await fetch(`/content/${language}/${name}.json`, { cache: "no-cache" });
+    const response = await fetch(withBase(`/content/${language}/${name}.json`), { cache: "no-cache" });
     if (!response.ok) {
       throw new Error(`Missing content file: ${language}/${name}.json`);
     }
@@ -82,7 +104,7 @@
     brand.href = localizedHref("/");
 
     const logo = make("img", "brand-logo");
-    logo.src = site.logoHeader;
+    logo.src = withBase(site.logoHeader);
     logo.alt = site.logoAlt;
     brand.append(logo);
 
@@ -134,7 +156,7 @@
     const inner = make("div", "footer-inner");
     const brandBlock = make("div", "footer-brand");
     const logo = make("img", "footer-logo");
-    logo.src = site.logoFooter;
+    logo.src = withBase(site.logoFooter);
     logo.alt = site.logoAlt;
     const tagline = make("p", "", foot.tagline);
     brandBlock.append(logo, tagline);
@@ -194,7 +216,7 @@
     const visual = make("div", "hero-visual");
     const logoWrap = make("div", "hero-logo-card");
     const logo = make("img", "");
-    logo.src = hero.visualLogo || "/assets/aigc/ai_game_connect_website_logo_horizontal_light.png";
+    logo.src = withBase(hero.visualLogo || "/assets/aigc/ai_game_connect_website_logo_horizontal_light.png");
     logo.alt = hero.visualLogoAlt || "AI Game Connect";
     logoWrap.append(logo);
     visual.append(logoWrap);
