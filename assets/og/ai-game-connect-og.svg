@@ -1,0 +1,50 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AI Game Connect social preview</title>
+  <desc id="desc">Light AI Game Connect preview with connect, compete, rank, reward, and approved places messaging.</desc>
+  <rect width="1200" height="630" fill="#F8FAFC"/>
+  <rect x="56" y="56" width="1088" height="518" rx="36" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <circle cx="1014" cy="132" r="104" fill="#EAF3FF"/>
+  <circle cx="104" cy="534" r="112" fill="#FFF0DF"/>
+  <circle cx="1034" cy="520" r="58" fill="#FFF7D7"/>
+  <circle cx="174" cy="132" r="48" fill="#EAFFF2"/>
+  <path d="M246 340C350 250 476 444 586 326C712 192 846 354 954 242" stroke="#D9EAFF" stroke-width="7" stroke-linecap="round"/>
+  <g filter="url(#softShadow)">
+    <rect x="92" y="96" width="210" height="210" rx="24" fill="#07111F"/>
+    <path d="M154 176C154 139.549 183.549 110 220 110C256.451 110 286 139.549 286 176C286 212.451 256.451 242 220 242H154V176Z" fill="#2F80FF"/>
+    <path d="M132 226C132 189.549 161.549 160 198 160C234.451 160 264 189.549 264 226C264 262.451 234.451 292 198 292H132V226Z" fill="#FF8A1F"/>
+    <circle cx="220" cy="176" r="22" fill="#FFFFFF"/>
+    <circle cx="198" cy="226" r="22" fill="#FFFFFF"/>
+    <path d="M220 176L198 226" stroke="#07111F" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <text x="342" y="150" fill="#07111F" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">AI Game Connect</text>
+  <text x="342" y="242" fill="#07111F" font-family="Sora, Inter, Arial, sans-serif" font-size="64" font-weight="800" letter-spacing="0">Connect. Compete.</text>
+  <text x="342" y="322" fill="#07111F" font-family="Sora, Inter, Arial, sans-serif" font-size="64" font-weight="800" letter-spacing="0">Rank. Get Rewarded.</text>
+  <text x="342" y="386" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600">Real-life games, approved places, fair rankings, future rewards.</text>
+  <g>
+    <rect x="342" y="436" width="134" height="46" rx="23" fill="#FF8A1F"/>
+    <text x="409" y="466" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">Register</text>
+    <rect x="494" y="436" width="184" height="46" rx="23" fill="#EAF3FF"/>
+    <text x="586" y="466" text-anchor="middle" fill="#2F80FF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">Dawrak Preview</text>
+    <rect x="696" y="436" width="194" height="46" rx="23" fill="#EAFFF2"/>
+    <text x="793" y="466" text-anchor="middle" fill="#0F8F4D" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">Approved Places</text>
+  </g>
+  <g filter="url(#softShadow)">
+    <rect x="784" y="116" width="250" height="132" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="810" y="154" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">LEADERBOARD</text>
+    <text x="810" y="196" fill="#07111F" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="900">#1 Sample Player</text>
+    <text x="810" y="224" fill="#F6C44F" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900">Gold preview badge</text>
+  </g>
+  <g filter="url(#softShadow)">
+    <rect x="834" y="286" width="260" height="146" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <text x="860" y="326" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">DAWRAK</text>
+    <text x="860" y="366" fill="#07111F" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="900">Game request found</text>
+    <text x="860" y="400" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">Frontend preview only</text>
+  </g>
+  <rect x="92" y="514" width="1016" height="42" rx="21" fill="#07111F"/>
+  <text x="600" y="542" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">No betting. No gambling. Approved places only.</text>
+  <defs>
+    <filter id="softShadow" x="52" y="70" width="1082" height="408" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#07111F" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+</svg>

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Terms of Use Placeholder | AI Game Connect",
-    "description": "A preview terms of use placeholder for AI Game Connect safety rules, approved places, and pre-launch website behavior."
+    "title": "Terms of Use — AI Game Connect",
+    "description": "Read the preview terms for AI Game Connect, including safety rules, approved places, no betting, no gambling, no poker, and pre-launch terms."
   },
   "hero": {
     "eyebrow": "Terms of Use",
@@ -28,14 +28,14 @@
         {
           "title": "Safety rules",
           "paragraphs": [
-            "AI Game Connect is designed for healthy real-life competition. The platform does not support betting, gambling, poker, private arrangements, or unsafe places."
+            "AI Game Connect is designed for healthy real-life competition. No betting. No gambling. No poker. No private places. Approved venues, fields, courts, and activity spaces only. Clear time, location, pricing, and rules."
           ],
           "items": ["No betting", "No gambling", "No poker", "No private arrangements", "Approved venues, fields, and courts only", "Clear times, locations, and rules"]
         },
         {
           "title": "Pre-launch / preview mode",
           "paragraphs": [
-            "This website is in pre-launch preview mode. It does not include real login, payments, live leaderboard profiles, live rewards, a custom backend, or a real chatbot."
+            "This website is in pre-launch preview mode. It does not include real login, payments, active leaderboard profiles, active rewards, a custom backend, or a real chatbot."
           ]
         },
         {

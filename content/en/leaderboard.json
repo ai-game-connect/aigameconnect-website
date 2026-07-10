@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Leaderboard | AI Game Connect",
-    "description": "Preview AI Game Connect rankings for Football, Padel, Chess, PlayStation, Board games, Dominoes, areas, and venues."
+    "title": "Leaderboard — Track Your Rank Across Real-Life Games",
+    "description": "Preview AI Game Connect leaderboards for football, padel, chess, PlayStation, board games, dominoes, areas, venues, and future tournaments."
   },
   "hero": {
     "eyebrow": "Leaderboard",
@@ -43,9 +43,9 @@
       "type": "leaderboard",
       "tone": "section-soft",
       "eyebrow": "Leaderboard Preview",
-      "title": "Preview only — live ranking profiles are coming soon.",
+      "title": "Preview only — ranking profiles are coming soon.",
       "body": "Sample rows show the planned structure without claiming live results.",
-      "previewLabel": "Preview only — live ranking profiles are coming soon.",
+      "previewLabel": "Preview only — ranking profiles are coming soon.",
       "sampleLabel": "Sample",
       "verifiedLabel": "Verified preview",
       "headers": ["Rank", "Player", "Activity", "Area", "Points"],
@@ -98,7 +98,7 @@
       "tone": "section-white",
       "eyebrow": "Fair Play / Verification",
       "title": "Rankings need trust before they need speed.",
-      "body": "The system is being designed around verified play and approved places.",
+      "body": "The system is being designed around verified play and approved places. No betting. No gambling. No poker. No private places. Approved venues, fields, courts, and activity spaces only.",
       "columns": 4,
       "items": [
         { "icon": "VA", "title": "Verified activities", "body": "Activity should be connected to real play." },
@@ -112,7 +112,7 @@
       "tone": "section-soft",
       "eyebrow": "CTA to Register",
       "title": "Register now to be ready for ranking access.",
-      "body": "Player accounts, activity profiles, and live ranking movement are coming later.",
+      "body": "Player accounts, activity profiles, and ranking movement are coming later.",
       "cta": { "label": "Register", "href": "/register/" }
     },
     {

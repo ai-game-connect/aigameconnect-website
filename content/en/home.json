@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "AI Game Connect | Connect. Compete. Rank. Get Rewarded.",
-    "description": "A bilingual preview website for AI Game Connect, helping players find real-life games, compete safely, track rankings, and unlock rewards through approved places."
+    "title": "AI Game Connect — Connect, Compete, Rank & Get Rewarded",
+    "description": "AI Game Connect helps players find real-life games and sports, compete in approved places, track rankings, and unlock rewards through safe, organized communities."
   },
   "hero": {
     "eyebrow": "Connect → Compete → Rank → Reward",
@@ -99,7 +99,7 @@
       "eyebrow": "Leaderboard Preview",
       "title": "Track your rank across the games you love.",
       "body": "Preview only — real rankings and player profiles are coming soon.",
-      "previewLabel": "Preview only — live ranking profiles are coming soon.",
+      "previewLabel": "Preview only — ranking profiles are coming soon.",
       "sampleLabel": "Sample",
       "verifiedLabel": "Verified preview",
       "headers": ["Rank", "Player", "Activity", "Area", "Points"],
@@ -147,7 +147,7 @@
       "tone": "section-white",
       "eyebrow": "Safety",
       "title": "Safety & Clear Rules",
-      "body": "Healthy competition works best when expectations are simple and shared.",
+      "body": "No betting. No gambling. No poker. No private places. Approved venues, fields, courts, and activity spaces only. Clear time, location, pricing, and rules.",
       "items": ["No betting", "No gambling", "No poker", "No private places", "Approved venues only", "Approved fields/courts", "Clear time/location", "Clear rules"]
     },
     {

@@ -103,15 +103,153 @@
     return icon;
   };
   const classToken = (value) => String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const canonicalBaseUrl = "https://ai-game-connect.github.io/aigameconnect-website/";
+  const routePaths = {
+    home: "",
+    dawrak: "dawrak/",
+    leaderboard: "leaderboard/",
+    rewards: "rewards/",
+    blog: "blog/",
+    about: "about/",
+    register: "register/",
+    signin: "signin/",
+    privacy: "privacy/",
+    terms: "terms/"
+  };
+  const routePath = routePaths[pageKey] || "";
+  const canonicalUrl = `${canonicalBaseUrl}${routePath}`;
+  const ogImageUrl = `${canonicalBaseUrl}assets/og/ai-game-connect-og.svg`;
+  const ogImageAlt = "AI Game Connect social preview with connect, compete, rank, reward, and approved places messaging.";
+  const safeMetaDescription = "AI Game Connect helps players find real-life games and sports, compete in approved places, track rankings, and unlock rewards through safe communities.";
+  const assetUrl = (path) => {
+    if (!path) return "";
+    if (/^[a-z][a-z\d+.-]*:/i.test(path)) return path;
+    return new URL(path.replace(/^\//, ""), canonicalBaseUrl).toString();
+  };
 
-  const setMetaDescription = (description) => {
-    let meta = document.querySelector('meta[name="description"]');
+  const ensureMeta = (attribute, key, value) => {
+    if (!value) return;
+    let meta = document.querySelector(`meta[${attribute}="${key}"]`);
     if (!meta) {
       meta = document.createElement("meta");
-      meta.name = "description";
+      meta.setAttribute(attribute, key);
       document.head.append(meta);
     }
-    meta.content = description;
+    meta.content = value;
+  };
+
+  const ensureLink = (rel, href, extra = {}) => {
+    const selector = extra.hreflang ? `link[rel="${rel}"][hreflang="${extra.hreflang}"]` : `link[rel="${rel}"]`;
+    let link = document.querySelector(selector);
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = rel;
+      if (extra.hreflang) link.hreflang = extra.hreflang;
+      document.head.append(link);
+    }
+    link.href = href;
+  };
+
+  const setStructuredData = (data, page) => {
+    ["structured-data", "static-structured-data"].forEach((id) => {
+      const existing = document.getElementById(id);
+      if (existing) existing.remove();
+    });
+
+    const graph = [];
+    if (pageKey === "home") {
+      graph.push({
+        "@type": "Organization",
+        "@id": `${canonicalBaseUrl}#organization`,
+        name: data.site.name,
+        url: canonicalBaseUrl,
+        logo: assetUrl(data.site.logoHeader),
+        description: page.meta.description || safeMetaDescription
+      });
+      graph.push({
+        "@type": "WebSite",
+        "@id": `${canonicalBaseUrl}#website`,
+        name: data.site.name,
+        url: canonicalBaseUrl,
+        description: page.meta.description || safeMetaDescription,
+        publisher: { "@id": `${canonicalBaseUrl}#organization` },
+        inLanguage: language
+      });
+    }
+
+    const faqItems = page.sections
+      .filter((section) => section.type === "faq")
+      .flatMap((section) => data.faq[section.group || pageKey] || []);
+    if (faqItems.length) {
+      graph.push({
+        "@type": "FAQPage",
+        "@id": `${canonicalUrl}#faq`,
+        url: canonicalUrl,
+        inLanguage: language,
+        mainEntity: faqItems.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer
+          }
+        }))
+      });
+    }
+
+    if (!graph.length) return;
+    const script = document.createElement("script");
+    script.id = "structured-data";
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
+    document.head.append(script);
+  };
+
+  const updatePageMetadata = (data, page) => {
+    const title = page.meta.title || "AI Game Connect";
+    const description = page.meta.description || safeMetaDescription;
+    document.title = title;
+    ensureMeta("name", "description", description);
+    ensureMeta("name", "robots", "index, follow");
+    ensureMeta("name", "theme-color", "#07111F");
+    ensureMeta("http-equiv", "content-language", language);
+
+    ensureLink("canonical", canonicalUrl);
+    ensureLink("alternate", canonicalUrl, { hreflang: "en" });
+    ensureLink("alternate", `${canonicalUrl}?lang=ar`, { hreflang: "ar" });
+    ensureLink("alternate", canonicalUrl, { hreflang: "x-default" });
+
+    ensureMeta("property", "og:site_name", data.site.name);
+    ensureMeta("property", "og:title", title);
+    ensureMeta("property", "og:description", description);
+    ensureMeta("property", "og:type", "website");
+    ensureMeta("property", "og:url", canonicalUrl);
+    ensureMeta("property", "og:locale", language === "ar" ? "ar_EG" : "en_US");
+    ensureMeta("property", "og:locale:alternate", language === "ar" ? "en_US" : "ar_EG");
+    ensureMeta("property", "og:image", ogImageUrl);
+    ensureMeta("property", "og:image:type", "image/svg+xml");
+    ensureMeta("property", "og:image:alt", ogImageAlt);
+
+    ensureMeta("name", "twitter:card", "summary_large_image");
+    ensureMeta("name", "twitter:title", title);
+    ensureMeta("name", "twitter:description", description);
+    ensureMeta("name", "twitter:image", ogImageUrl);
+    ensureMeta("name", "twitter:image:alt", ogImageAlt);
+
+    if (!document.querySelector('link[rel="apple-touch-icon"]')) {
+      const icon = document.createElement("link");
+      icon.rel = "apple-touch-icon";
+      icon.href = withBase("/assets/aigc/ai_game_connect_website_icon_light.png");
+      document.head.append(icon);
+    }
+    if (!document.querySelector('link[rel="manifest"]')) {
+      const manifest = document.createElement("link");
+      manifest.rel = "manifest";
+      manifest.href = withBase("/site.webmanifest");
+      document.head.append(manifest);
+    }
+
+    setStructuredData(data, page);
   };
 
   const localizedHref = (href) => {
@@ -255,6 +393,7 @@
     const bottom = make("div", "footer-bottom");
     bottom.append(make("span", "", foot.copyright));
     bottom.append(make("span", "", foot.previewNote));
+    if (foot.safetyNote) bottom.append(make("span", "", foot.safetyNote));
 
     inner.append(brandBlock, linkGroups);
     footer.append(inner, bottom);
@@ -295,6 +434,8 @@
     }
 
     const visual = make("div", "hero-visual hero-product-visual");
+    visual.setAttribute("role", "group");
+    visual.setAttribute("aria-label", hero.visualLabel || hero.title || "AI Game Connect product preview");
     visual.append(make("span", "hero-connector hero-connector-one"));
     visual.append(make("span", "hero-connector hero-connector-two"));
     const logoWrap = make("div", "hero-logo-card");
@@ -347,8 +488,12 @@
 
   const renderBadges = (section) => {
     const grid = make("div", "badge-grid");
+    grid.setAttribute("role", "list");
+    grid.setAttribute("aria-label", section.title || "Safety badges");
     (section.items || []).forEach((item) => {
-      grid.append(make("span", "", item));
+      const badge = make("span", "", item);
+      badge.setAttribute("role", "listitem");
+      grid.append(badge);
     });
     return grid;
   };
@@ -367,7 +512,9 @@
 
   const renderLeaderboard = (section) => {
     const stack = make("div", "leaderboard-preview-stack");
-    const previewLabel = section.previewLabel || (pageKey === "leaderboard" ? "Preview only - live ranking profiles are coming soon." : "");
+    stack.setAttribute("role", "region");
+    stack.setAttribute("aria-label", section.ariaLabel || section.title || "Leaderboard preview");
+    const previewLabel = section.previewLabel || (pageKey === "leaderboard" ? "Preview only - ranking profiles are coming soon." : "");
     if (previewLabel) {
       stack.append(make("p", "preview-label", previewLabel));
     }
@@ -390,6 +537,8 @@
 
     const wrapper = make("div", "table-card");
     const table = make("table", "");
+    const caption = make("caption", "sr-only", section.tableCaption || section.title || "Leaderboard preview table");
+    table.append(caption);
     const thead = make("thead");
     const headRow = make("tr");
     section.headers.forEach((heading) => headRow.append(make("th", "", heading)));
@@ -467,8 +616,11 @@
 
   const renderRewardBadges = (section) => {
     const grid = make("div", "reward-badge-grid");
+    grid.setAttribute("role", "list");
+    grid.setAttribute("aria-label", section.title || "Reward badge preview");
     (section.items || []).forEach((item, index) => {
       const card = renderCard(item, "reward-badge-card");
+      card.setAttribute("role", "listitem");
       card.style.setProperty("--stagger", index);
       grid.append(card);
     });
@@ -477,6 +629,8 @@
 
   const renderChatMockup = (chat, compact) => {
     const mockup = make("div", compact ? "chat-mockup hero-chat" : "chat-mockup");
+    mockup.setAttribute("role", "group");
+    mockup.setAttribute("aria-label", chat.ariaLabel || chat.title || "Dawrak chat preview");
     const headerRow = make("div", "chat-header");
     headerRow.append(make("span", "chat-status", chat.status));
     headerRow.append(make("strong", "", chat.title));
@@ -736,8 +890,7 @@
 
   const renderPage = (data) => {
     const page = data[pageKey];
-    document.title = page.meta.title;
-    setMetaDescription(page.meta.description);
+    updatePageMetadata(data, page);
 
     main.innerHTML = "";
     main.append(renderHero(page));

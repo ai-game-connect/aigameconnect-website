@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Register | AI Game Connect",
-    "description": "Register interest as a Founding Player or Founding Venue Partner for the AI Game Connect preview community."
+    "title": "Register — Join AI Game Connect as a Player or Venue",
+    "description": "Register as a player to discover games, compete, rank, and get rewards, or register your venue to receive organized player demand."
   },
   "hero": {
     "eyebrow": "Register",
@@ -43,7 +43,7 @@
       "tone": "section-soft",
       "eyebrow": "Safety Agreement Reminder",
       "title": "Every registration path follows the same safety standards.",
-      "body": "The ecosystem is designed for healthy real-life competition in approved places only.",
+      "body": "No betting. No gambling. No poker. No private places. Approved venues, fields, courts, and activity spaces only. Clear time, location, pricing, and rules.",
       "items": ["No betting", "No gambling", "No poker", "No private arrangements", "Approved venues, fields, and courts only", "Clear times", "Clear locations", "Clear rules"]
     },
     {

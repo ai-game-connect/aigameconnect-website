@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Dawrak | AI Game Connect",
-    "description": "Preview Dawrak, the AI Game Connect assistant being built to help players manage real-life game requests, venue details, rankings, and rewards."
+    "title": "Dawrak — Your AI Assistant for Real-Life Play",
+    "description": "Dawrak helps players request games, receive invitations, get venue locations, follow competition updates, track rankings, and stay notified about rewards."
   },
   "hero": {
     "eyebrow": "Dawrak Assistant",
@@ -116,7 +116,7 @@
       "tone": "section-white",
       "eyebrow": "Safety Boundaries",
       "title": "Dawrak supports clear and approved play only.",
-      "body": "The assistant concept follows the same safety standards as the platform.",
+      "body": "No betting. No gambling. No poker. No private places. Approved venues, fields, courts, and activity spaces only. Clear time, location, pricing, and rules.",
       "items": ["Approved places only", "No betting", "No gambling", "No poker", "No private arrangements", "Clear time and location", "Clear rules", "Verified activity"]
     },
     {

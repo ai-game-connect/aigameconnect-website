@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ai-game-connect.github.io/aigameconnect-website/sitemap.xml

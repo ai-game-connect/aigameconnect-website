@@ -1,0 +1,17 @@
+{
+  "name": "AI Game Connect",
+  "short_name": "AI Game Connect",
+  "description": "Connect, compete, rank, and get rewarded through safe real-life games and approved places.",
+  "start_url": "/aigameconnect-website/",
+  "scope": "/aigameconnect-website/",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#07111F",
+  "icons": [
+    {
+      "src": "/aigameconnect-website/assets/aigc/ai_game_connect_website_icon_light.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
