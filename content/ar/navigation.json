@@ -1,6 +1,7 @@
 {
   "primaryLabel": "التنقل الرئيسي",
   "menuLabel": "فتح القائمة",
+  "closeLabel": "إغلاق القائمة",
   "languageToggle": {
     "label": "تغيير اللغة",
     "en": "EN",

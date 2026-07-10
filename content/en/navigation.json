@@ -1,6 +1,7 @@
 {
   "primaryLabel": "Main navigation",
   "menuLabel": "Open navigation",
+  "closeLabel": "Close navigation",
   "languageToggle": {
     "label": "Switch language",
     "en": "EN",

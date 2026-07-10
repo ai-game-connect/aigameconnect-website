@@ -8,7 +8,7 @@
     "title": "Privacy Policy placeholder.",
     "body": "This is an honest placeholder for the preview website. A full privacy policy will be published before public launch.",
     "actions": [
-      { "label": "Register", "href": "/register/" },
+      { "label": "Back to Register", "href": "/register/" },
       { "label": "Back to Home", "href": "/", "variant": "btn-outline" }
     ],
     "visualCards": [

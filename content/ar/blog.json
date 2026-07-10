@@ -8,7 +8,8 @@
     "title": "تحديثات لمنافسة واقعية أكثر صحة.",
     "body": "اقرأ إرشادات ومعاينات لتحديثات مستقبلية لمجتمع AI Game Connect.",
     "actions": [
-      { "label": "التسجيل", "href": "/register/" }
+      { "label": "التسجيل", "href": "/register/" },
+      { "label": "استكشف دورك", "href": "/dawrak/", "variant": "btn-outline" }
     ],
     "visualCards": [
       { "icon": "GG", "title": "إرشادات اللعب", "body": "منشورات مفيدة لاحقا." },

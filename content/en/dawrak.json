@@ -9,7 +9,7 @@
     "body": "Dawrak is being built to help players request games, receive updates, discover approved venues, and follow rankings and rewards more easily.",
     "actions": [
       { "label": "Register to Use Dawrak", "href": "/register/" },
-      { "label": "Register as Player", "href": "/register/#player", "variant": "btn-outline" }
+      { "label": "See How It Works", "href": "#request-flow", "variant": "btn-outline" }
     ],
     "chat": {
       "status": "Frontend mockup only",

@@ -8,7 +8,8 @@
     "title": "Compete, rank, and unlock rewards.",
     "body": "Future rewards will connect real-life participation, leaderboard movement, badges, and partner offers in a safe approved-place ecosystem.",
     "actions": [
-      { "label": "Register to Get Reward Updates", "href": "/register/" }
+      { "label": "Register to Get Reward Updates", "href": "/register/" },
+      { "label": "View Leaderboard", "href": "/leaderboard/", "variant": "btn-outline" }
     ],
     "visualCards": [
       { "icon": "VD", "title": "Venue discounts", "body": "Future partner value." },

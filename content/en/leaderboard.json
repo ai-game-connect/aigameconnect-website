@@ -8,7 +8,8 @@
     "title": "Track your progress. Climb the leaderboard.",
     "body": "Future leaderboards will help players follow activity, verified participation, fair play, and ranking movement across the games they love.",
     "actions": [
-      { "label": "Register to Track Your Rank", "href": "/register/" }
+      { "label": "Register to Track Your Rank", "href": "/register/" },
+      { "label": "Explore Rewards", "href": "/rewards/", "variant": "btn-outline" }
     ],
     "visualCards": [
       { "icon": "#1", "title": "Player rank", "body": "Preview only." },

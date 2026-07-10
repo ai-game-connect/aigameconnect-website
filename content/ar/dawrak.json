@@ -9,7 +9,7 @@
     "body": "دورك يتم بناؤه لمساعدة اللاعبين على طلب الألعاب، استقبال التحديثات، اكتشاف الأماكن المعتمدة، ومتابعة الترتيب والمكافآت بسهولة أكبر.",
     "actions": [
       { "label": "سجل لاستخدام دورك", "href": "/register/" },
-      { "label": "سجل كلاعب", "href": "/register/#player", "variant": "btn-outline" }
+      { "label": "شاهد كيف يعمل", "href": "#request-flow", "variant": "btn-outline" }
     ],
     "chat": {
       "status": "نموذج أمامي فقط",

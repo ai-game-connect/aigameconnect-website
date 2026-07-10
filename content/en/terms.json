@@ -8,7 +8,7 @@
     "title": "Terms of Use placeholder.",
     "body": "This is an honest placeholder for the preview website. Final terms will be published before launch.",
     "actions": [
-      { "label": "Register", "href": "/register/" },
+      { "label": "Back to Register", "href": "/register/" },
       { "label": "Back to Home", "href": "/", "variant": "btn-outline" }
     ],
     "visualCards": [

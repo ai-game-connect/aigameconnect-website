@@ -8,7 +8,8 @@
     "title": "Updates for healthier real-life competition.",
     "body": "Read preview guides and placeholder updates for the future AI Game Connect community.",
     "actions": [
-      { "label": "Register", "href": "/register/" }
+      { "label": "Register", "href": "/register/" },
+      { "label": "Explore Dawrak", "href": "/dawrak/", "variant": "btn-outline" }
     ],
     "visualCards": [
       { "icon": "GG", "title": "Game guides", "body": "Helpful future posts." },

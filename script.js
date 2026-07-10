@@ -173,11 +173,15 @@
     menuButton.type = "button";
     menuButton.setAttribute("aria-label", nav.menuLabel);
     menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-controls", "primary-navigation");
     for (let index = 0; index < 3; index += 1) {
-      menuButton.append(make("span"));
+      const bar = make("span");
+      bar.setAttribute("aria-hidden", "true");
+      menuButton.append(bar);
     }
 
     const links = make("nav", "nav-links");
+    links.id = "primary-navigation";
     links.setAttribute("aria-label", nav.primaryLabel);
     nav.links.forEach((item) => {
       const link = make("a", "nav-link", item.label);
@@ -197,9 +201,26 @@
     actions.append(createAction(nav.actions.register, "btn-primary"));
     actions.append(createAction(nav.actions.signin, "btn-outline"));
 
+    const closeLabel = nav.closeLabel || "Close navigation";
+    const closeMenu = () => {
+      inner.classList.remove("is-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", nav.menuLabel);
+    };
+
     menuButton.addEventListener("click", () => {
       const isOpen = inner.classList.toggle("is-open");
       menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.setAttribute("aria-label", isOpen ? closeLabel : nav.menuLabel);
+    });
+    links.addEventListener("click", (event) => {
+      if (event.target.closest("a")) closeMenu();
+    });
+    actions.addEventListener("click", (event) => {
+      if (event.target.closest("a")) closeMenu();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeMenu();
     });
 
     inner.append(brand, menuButton, links, actions);
@@ -382,6 +403,7 @@
       if (index < 3) tr.classList.add("is-top-rank", `rank-${index + 1}`);
       row.forEach((cell, cellIndex) => {
         const td = make("td", "", cell);
+        td.dataset.label = section.headers[cellIndex] || "";
         if (cellIndex === 1 && pageKey === "leaderboard") {
           td.append(make("span", "sample-tag", section.sampleLabel || "Sample"));
         }
@@ -532,6 +554,7 @@
       input.name = field.name;
       input.id = id;
       if (field.required) input.required = true;
+      if (field.required) input.setAttribute("aria-required", "true");
       label.append(input, make("span", "", field.label));
       return label;
     }
@@ -545,6 +568,7 @@
       select.id = id;
       select.name = field.name;
       if (field.required) select.required = true;
+      if (field.required) select.setAttribute("aria-required", "true");
       field.options.forEach((option) => {
         const opt = make("option", "", option);
         opt.value = option;
@@ -570,6 +594,7 @@
     input.name = field.name;
     input.placeholder = field.placeholder || "";
     if (field.required) input.required = true;
+    if (field.required) input.setAttribute("aria-required", "true");
     wrap.append(input);
     return wrap;
   };
