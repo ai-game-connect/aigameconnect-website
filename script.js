@@ -46,6 +46,63 @@
     return node;
   };
 
+  const svg = (body) => `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${body}</svg>`;
+  const iconLibrary = {
+    activity: svg('<path d="M6 8.5h12"/><path d="M8 5.5h8"/><path d="M8 18.5h8"/><path d="M6 15.5h12"/><circle cx="12" cy="12" r="8.5"/>'),
+    ball: svg('<circle cx="12" cy="12" r="8.5"/><path d="m12 7 3.5 2.6-1.4 4.2H9.9L8.5 9.6 12 7Z"/><path d="m8.5 9.6-3-.9"/><path d="m15.5 9.6 3-.9"/><path d="m9.9 13.8-2.1 3"/><path d="m14.1 13.8 2.1 3"/>'),
+    racket: svg('<path d="M15.6 4.4c2.1 2.1 2 5.7-.2 7.9s-5.8 2.3-7.9.2-2-5.7.2-7.9 5.8-2.3 7.9-.2Z"/><path d="m8.7 13.3-4.4 4.4"/><path d="m3.2 16.6 4.2 4.2"/><path d="M10 6.8h5"/><path d="M8.3 9.3h7.2"/>'),
+    board: svg('<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M4 10h16"/><path d="M4 15h16"/><path d="M10 4v16"/><path d="M15 4v16"/>'),
+    controller: svg('<path d="M7 10h10c2.2 0 3.6 1.5 4 4.1.4 2.7-.6 4.4-2.3 4.4-.9 0-1.6-.5-2.3-1.5H7.6c-.7 1-1.4 1.5-2.3 1.5-1.7 0-2.7-1.7-2.3-4.4C3.4 11.5 4.8 10 7 10Z"/><path d="M8 13v3"/><path d="M6.5 14.5h3"/><circle cx="16.5" cy="14" r=".7"/><circle cx="18.5" cy="16" r=".7"/>'),
+    chess: svg('<path d="M9 20h6"/><path d="M8 17h8"/><path d="M10 14h4l1-6h-6l1 6Z"/><path d="M10 8 8 5.5 10.5 4 12 6l1.5-2L16 5.5 14 8"/>'),
+    domino: svg('<rect x="5" y="3.5" width="14" height="17" rx="3" transform="rotate(-8 12 12)"/><path d="M6.2 12.1 18 10.5"/><circle cx="9" cy="8" r=".8"/><circle cx="15.2" cy="16" r=".8"/><circle cx="11.8" cy="16.5" r=".8"/>'),
+    reward: svg('<path d="M8 4h8v5a4 4 0 0 1-8 0V4Z"/><path d="M8 6H5.5a2 2 0 0 0 0 4H8"/><path d="M16 6h2.5a2 2 0 0 1 0 4H16"/><path d="M12 13v4"/><path d="M8.5 20h7"/><path d="M10 17h4"/>'),
+    check: svg('<path d="M20 7 10 17l-5-5"/><circle cx="12" cy="12" r="9"/>'),
+    message: svg('<path d="M5 5h14v10H8l-4 4V6a1 1 0 0 1 1-1Z"/><path d="M8 9h8"/><path d="M8 12h5"/>'),
+    users: svg('<path d="M8.5 12a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="M15.5 11a3 3 0 1 0 0-6"/><path d="M3.5 20a5 5 0 0 1 10 0"/><path d="M14 17.5a4.5 4.5 0 0 1 6.5 2.5"/>'),
+    map: svg('<path d="M12 21s6-5.1 6-10a6 6 0 0 0-12 0c0 4.9 6 10 6 10Z"/><circle cx="12" cy="11" r="2.2"/>'),
+    calendar: svg('<rect x="4" y="5" width="16" height="15" rx="3"/><path d="M8 3v4"/><path d="M16 3v4"/><path d="M4 10h16"/><path d="M8 14h3"/><path d="M13 14h3"/>'),
+    trend: svg('<path d="M4 17h16"/><path d="m6 14 4-4 3 3 5-7"/><path d="M15 6h3v3"/>'),
+    venue: svg('<path d="M4 20h16"/><path d="M6 20V9l6-5 6 5v11"/><path d="M9 20v-6h6v6"/><path d="M9.5 10.5h5"/>'),
+    shield: svg('<path d="M12 21s7-3.5 7-10V5l-7-2-7 2v6c0 6.5 7 10 7 10Z"/><path d="m9 12 2 2 4-5"/>'),
+    tag: svg('<path d="M4 12.5V5h7.5L20 13.5 13.5 20 4 12.5Z"/><circle cx="8" cy="8" r="1.2"/>'),
+    badge: svg('<circle cx="12" cy="9" r="5"/><path d="m8.5 13.5-1 6 4.5-2.3 4.5 2.3-1-6"/><path d="m10 9 1.3 1.3L14 7.6"/>'),
+    flag: svg('<path d="M6 21V4"/><path d="M6 5h11l-2 4 2 4H6"/>'),
+    repeat: svg('<path d="M17 2.5 20.5 6 17 9.5"/><path d="M3.5 11V9a3 3 0 0 1 3-3h14"/><path d="M7 21.5 3.5 18 7 14.5"/><path d="M20.5 13v2a3 3 0 0 1-3 3h-14"/>'),
+    document: svg('<path d="M7 3.5h7l3 3V20a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4.5a1 1 0 0 1 1-1Z"/><path d="M14 3.5V7h3"/><path d="M9 11h6"/><path d="M9 15h6"/>'),
+    spark: svg('<path d="m12 3 1.6 5.1L19 10l-5.4 1.9L12 17l-1.6-5.1L5 10l5.4-1.9L12 3Z"/><path d="M5 16.5 3.5 21"/><path d="M19 16.5l1.5 4.5"/>')
+  };
+  const iconMap = {
+    FB: "ball", PD: "racket", BG: "board", PS: "controller", CH: "chess", DM: "domino",
+    RW: "reward", OK: "check", RQ: "message", IN: "users", LOC: "map", TM: "calendar",
+    UP: "trend", LT: "reward", VH: "venue", AC: "flag", SC: "calendar", SP: "spark",
+    VD: "tag", CP: "reward", PR: "badge", BD: "badge", PO: "tag", LR: "trend",
+    MD: "users", BV: "trend", TV: "shield", PL: "users", VN: "venue", AR: "map",
+    FP: "shield", VA: "check", CR: "check", NF: "shield", TR: "reward", PT: "users",
+    RS: "trend", CS: "repeat", DS: "tag", EV: "calendar", VS: "venue", TOP: "reward",
+    ST: "repeat", GG: "document", SF: "shield", MAP: "map", RL: "shield", GR: "message",
+    RR: "reward", OF: "tag", AV: "venue", CN: "users", RK: "trend"
+  };
+  const iconTheme = (item) => {
+    const source = `${item.icon || ""} ${item.title || ""}`.toLowerCase();
+    if (/reward|badge|leader|rank|gold|#1|top|rw|lr|bd|cp|vd/.test(source)) return "gold";
+    if (/safe|approved|venue|field|court|trust|safety|ok|fp|tv|shield/.test(source)) return "green";
+    if (/dawrak|request|notification|assistant|orange|rq|in/.test(source)) return "orange";
+    return "blue";
+  };
+  const renderIcon = (item) => {
+    const icon = make("span", `card-icon icon-${iconTheme(item)}`);
+    icon.setAttribute("aria-hidden", "true");
+    const raw = String(item.icon || "");
+    if (/^#?\d+$/.test(raw)) {
+      icon.innerHTML = `<span class="icon-number">${raw}</span>`;
+      return icon;
+    }
+    const key = iconMap[raw] || "spark";
+    icon.innerHTML = iconLibrary[key] || iconLibrary.spark;
+    return icon;
+  };
+  const classToken = (value) => String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
   const setMetaDescription = (description) => {
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
@@ -192,7 +249,9 @@
 
   const renderCard = (item, className) => {
     const card = make("article", className || "feature-card");
-    if (item.icon) card.append(make("span", "card-icon", item.icon));
+    card.classList.add(`theme-${iconTheme(item)}`);
+    if (item.icon) card.classList.add(`icon-key-${classToken(item.icon)}`);
+    if (item.icon) card.append(renderIcon(item));
     if (item.kicker) card.append(make("p", "card-kicker", item.kicker));
     if (item.title) card.append(make("h3", "", item.title));
     if (item.body) card.append(make("p", "", item.body));
@@ -213,7 +272,9 @@
       return renderChatMockup(hero.chat, true);
     }
 
-    const visual = make("div", "hero-visual");
+    const visual = make("div", "hero-visual hero-product-visual");
+    visual.append(make("span", "hero-connector hero-connector-one"));
+    visual.append(make("span", "hero-connector hero-connector-two"));
     const logoWrap = make("div", "hero-logo-card");
     const logo = make("img", "");
     logo.src = withBase(hero.visualLogo || "/assets/aigc/ai_game_connect_website_logo_horizontal_light.png");
@@ -291,8 +352,11 @@
     thead.append(headRow);
 
     const tbody = make("tbody");
-    section.rows.forEach((row) => {
+    section.rows.forEach((row, index) => {
       const tr = make("tr");
+      tr.classList.add("leaderboard-row");
+      tr.style.setProperty("--stagger", index);
+      if (index < 3) tr.classList.add("is-top-rank", `rank-${index + 1}`);
       row.forEach((cell) => tr.append(make("td", "", cell)));
       tbody.append(tr);
     });
@@ -371,11 +435,12 @@
   const fieldId = (formKey, field) => `${formKey}-${field.name}`;
 
   const renderInputField = (formKey, field) => {
-    const wrap = make("div", "form-field");
+    const wrap = make("div", `form-field field-${field.type || "text"}`);
     const id = fieldId(formKey, field);
 
     if (field.type === "checkboxGroup") {
       const fieldset = make("fieldset", "checkbox-group");
+      fieldset.classList.add("field-checkbox-group");
       fieldset.append(make("legend", "", field.label));
       field.options.forEach((option, index) => {
         const optionId = `${id}-${index}`;
@@ -393,6 +458,7 @@
 
     if (field.type === "checkbox") {
       const label = make("label", "check-option single-check");
+      label.classList.add("field-checkbox");
       const input = make("input");
       input.type = "checkbox";
       input.name = field.name;
@@ -559,6 +625,11 @@
 
   const setupReveal = () => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    document.querySelectorAll(".card-grid, .hero-card-grid, .badge-grid, .steps-list, .blog-grid, .forms-grid, .faq-list, tbody").forEach((group) => {
+      Array.from(group.children).forEach((child, index) => {
+        child.style.setProperty("--stagger", index);
+      });
+    });
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
