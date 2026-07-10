@@ -5,6 +5,13 @@
     "body": "Tell us what you want to play, where you play, and how you want to participate.",
     "foundingLine": "Register now as a Founding Player and get priority invites once matches launch in your area.",
     "pricingLine": "Free to register and join the early player community. Any venue costs, paid competitions, or future premium features will be shown clearly before confirmation.",
+    "sections": [
+      { "title": "Basic info", "fields": ["full_name", "whatsapp", "age_range"] },
+      { "title": "Activity interests", "fields": ["activities", "looking_to", "skill_level"] },
+      { "title": "Area and availability", "fields": ["city_area", "preferred_days", "preferred_time"] },
+      { "title": "Ranking / reward notifications", "fields": ["notifications"] },
+      { "title": "Notes", "fields": ["notes"] }
+    ],
     "submitLabel": "Preview Player Registration",
     "confirmation": "Thanks. This is a preview form. Connect an external form before launch.",
     "fields": [
@@ -27,6 +34,14 @@
     "body": "Share the details needed to review your venue as a future approved partner.",
     "foundingLine": "Founding Venue Partners get preferred visibility and early access to pricing before public launch.",
     "pricingLine": "Simple, transparent plans for venues — full pricing shared after you register your interest.",
+    "sections": [
+      { "title": "Venue basics", "fields": ["venue_name", "venue_type"] },
+      { "title": "Location and contact", "fields": ["city_area", "maps_location", "contact_person", "whatsapp"] },
+      { "title": "Activities and capacity", "fields": ["available_activities", "working_hours", "capacity"] },
+      { "title": "Pricing and hosting potential", "fields": ["pricing_details", "host_competitions"] },
+      { "title": "Safety agreement", "fields": ["safety_agreement"] },
+      { "title": "Notes", "fields": ["notes"] }
+    ],
     "submitLabel": "Preview Venue Registration",
     "confirmation": "Thanks. This is a preview form. Connect an external form before launch.",
     "fields": [

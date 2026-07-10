@@ -80,7 +80,8 @@
     FP: "shield", VA: "check", CR: "check", NF: "shield", TR: "reward", PT: "users",
     RS: "trend", CS: "repeat", DS: "tag", EV: "calendar", VS: "venue", TOP: "reward",
     ST: "repeat", GG: "document", SF: "shield", MAP: "map", RL: "shield", GR: "message",
-    RR: "reward", OF: "tag", AV: "venue", CN: "users", RK: "trend"
+    RR: "reward", OF: "tag", AV: "venue", CN: "users", RK: "trend", LB: "trend",
+    SR: "spark", TP: "reward", CM: "users"
   };
   const iconTheme = (item) => {
     const source = `${item.icon || ""} ${item.title || ""}`.toLowerCase();
@@ -292,7 +293,7 @@
 
   const renderHero = (page) => {
     const hero = page.hero;
-    const section = make("section", "hero-section reveal");
+    const section = make("section", `hero-section page-${pageKey}-hero reveal`);
     const container = make("div", "section-container hero-grid");
     const copy = make("div", "hero-copy");
 
@@ -344,6 +345,28 @@
   };
 
   const renderLeaderboard = (section) => {
+    const stack = make("div", "leaderboard-preview-stack");
+    const previewLabel = section.previewLabel || (pageKey === "leaderboard" ? "Preview only - live ranking profiles are coming soon." : "");
+    if (previewLabel) {
+      stack.append(make("p", "preview-label", previewLabel));
+    }
+
+    const topGrid = make("div", "top-rank-grid");
+    section.rows.slice(0, 3).forEach((row, index) => {
+      const card = make("article", `top-rank-card rank-${index + 1}`);
+      card.style.setProperty("--stagger", index);
+      card.append(make("span", "top-rank-number", row[0]));
+      card.append(make("h3", "", row[1]));
+      card.append(make("p", "top-rank-detail", `${row[2]} - ${row[3]}`));
+      card.append(make("strong", "top-rank-score", row[4]));
+      const meta = make("div", "rank-card-meta");
+      meta.append(make("span", "verified-pill", section.verifiedLabel || "Verified preview"));
+      meta.append(make("span", "movement-pill", index === 0 ? "+3" : index === 1 ? "+2" : "+1"));
+      card.append(meta);
+      topGrid.append(card);
+    });
+    if (section.rows.length >= 3) stack.append(topGrid);
+
     const wrapper = make("div", "table-card");
     const table = make("table", "");
     const thead = make("thead");
@@ -357,34 +380,74 @@
       tr.classList.add("leaderboard-row");
       tr.style.setProperty("--stagger", index);
       if (index < 3) tr.classList.add("is-top-rank", `rank-${index + 1}`);
-      row.forEach((cell) => tr.append(make("td", "", cell)));
+      row.forEach((cell, cellIndex) => {
+        const td = make("td", "", cell);
+        if (cellIndex === 1 && pageKey === "leaderboard") {
+          td.append(make("span", "sample-tag", section.sampleLabel || "Sample"));
+        }
+        if (cellIndex === row.length - 1) {
+          td.append(make("span", "movement-pill table-move", index % 2 === 0 ? "+3" : "+1"));
+        }
+        tr.append(td);
+      });
       tbody.append(tr);
     });
 
     table.append(thead, tbody);
     wrapper.append(table);
-    return wrapper;
+    stack.append(wrapper);
+    return stack;
   };
 
   const renderFilters = (section) => {
     const filters = make("div", "filter-row");
-    section.items.forEach((item) => {
+    section.items.forEach((item, index) => {
       const button = make("button", "filter-chip", item);
       button.type = "button";
-      button.setAttribute("aria-pressed", "false");
+      button.setAttribute("aria-pressed", index === 0 ? "true" : "false");
       filters.append(button);
     });
     return filters;
   };
 
   const renderBlogGrid = (section) => {
-    const grid = make("div", "blog-grid");
+    const grid = make("div", `blog-grid ${section.featured || section.items.length === 1 ? "is-featured-grid" : ""}`);
     section.items.forEach((item) => {
       const card = make("article", "blog-card");
       card.append(make("p", "card-kicker", item.category));
       card.append(make("h3", "", item.title));
       card.append(make("p", "", item.body));
       card.append(make("span", "card-meta", item.meta));
+      grid.append(card);
+    });
+    return grid;
+  };
+
+  const renderNotificationStack = (section) => {
+    const stack = make("div", "notification-stack");
+    (section.items || []).forEach((item, index) => {
+      const card = renderCard(item, "notification-card");
+      card.style.setProperty("--stagger", index);
+      stack.append(card);
+    });
+    return stack;
+  };
+
+  const renderRankingPreview = (section) => {
+    const grid = make("div", "ranking-preview-grid");
+    (section.items || []).forEach((item, index) => {
+      const card = renderCard(item, "ranking-preview-card");
+      card.style.setProperty("--stagger", index);
+      grid.append(card);
+    });
+    return grid;
+  };
+
+  const renderRewardBadges = (section) => {
+    const grid = make("div", "reward-badge-grid");
+    (section.items || []).forEach((item, index) => {
+      const card = renderCard(item, "reward-badge-card");
+      card.style.setProperty("--stagger", index);
       grid.append(card);
     });
     return grid;
@@ -397,8 +460,9 @@
     headerRow.append(make("strong", "", chat.title));
     mockup.append(headerRow);
 
-    chat.messages.forEach((message) => {
+    chat.messages.forEach((message, index) => {
       const bubble = make("p", `chat-bubble ${message.from === "user" ? "is-user" : "is-bot"}`, message.text);
+      bubble.style.setProperty("--stagger", index);
       mockup.append(bubble);
     });
     return mockup;
@@ -418,6 +482,10 @@
 
   const renderLegal = (section) => {
     const wrapper = make("div", "legal-blocks");
+    const status = make("div", "legal-status-card");
+    status.append(make("span", "preview-label", section.eyebrow || ""));
+    if (section.body) status.append(make("p", "", section.body));
+    wrapper.append(status);
     section.blocks.forEach((block) => {
       const article = make("article", "legal-block");
       article.append(make("h3", "", block.title));
@@ -517,7 +585,24 @@
 
     const form = make("form", "questionnaire-form");
     form.noValidate = false;
-    formData.fields.forEach((field) => form.append(renderInputField(formKey, field)));
+    if (formData.sections) {
+      const fieldsByName = new Map(formData.fields.map((field) => [field.name, field]));
+      formData.sections.forEach((group) => {
+        const groupNode = make("div", "questionnaire-section");
+        const heading = make("div", "questionnaire-section-heading");
+        heading.append(make("span", "section-dot"));
+        heading.append(make("h4", "", group.title));
+        groupNode.append(heading);
+        if (group.body) groupNode.append(make("p", "questionnaire-section-copy", group.body));
+        (group.fields || []).forEach((fieldName) => {
+          const field = fieldsByName.get(fieldName);
+          if (field) groupNode.append(renderInputField(formKey, field));
+        });
+        form.append(groupNode);
+      });
+    } else {
+      formData.fields.forEach((field) => form.append(renderInputField(formKey, field)));
+    }
     const submit = make("button", "btn btn-primary");
     submit.type = "submit";
     submit.textContent = formData.submitLabel;
@@ -548,8 +633,14 @@
 
   const renderSignin = (section) => {
     const card = make("div", "coming-card");
+    if (section.label) card.append(make("p", "preview-label", section.label));
     card.append(make("h2", "", section.title));
     card.append(make("p", "", section.body));
+    if (section.notes) {
+      const notes = make("div", "signin-note-grid");
+      section.notes.forEach((note) => notes.append(make("span", "", note)));
+      card.append(notes);
+    }
     const actions = make("div", "section-actions");
     section.actions.forEach((action, index) => {
       actions.append(createAction(action, index === 0 ? "btn-primary" : "btn-outline"));
@@ -570,6 +661,7 @@
       case "cards":
       case "activities":
       case "paths":
+      case "timeline":
         return renderCards(section);
       case "badges":
         return renderBadges(section);
@@ -581,6 +673,12 @@
         return renderFilters(section);
       case "blogGrid":
         return renderBlogGrid(section);
+      case "notifications":
+        return renderNotificationStack(section);
+      case "rankingPreview":
+        return renderRankingPreview(section);
+      case "rewardBadges":
+        return renderRewardBadges(section);
       case "chat":
         return renderChatMockup(section.chat, false);
       case "faq":
@@ -599,7 +697,7 @@
   };
 
   const renderSection = (section, data) => {
-    const node = make("section", `section reveal ${section.tone || ""}`);
+    const node = make("section", `section reveal section-${section.type || "cards"} ${section.tone || ""}`);
     if (section.id) node.id = section.id;
     const container = make("div", `section-container ${section.layout || ""}`);
     if (section.type !== "signin") {
@@ -625,7 +723,7 @@
 
   const setupReveal = () => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    document.querySelectorAll(".card-grid, .hero-card-grid, .badge-grid, .steps-list, .blog-grid, .forms-grid, .faq-list, tbody").forEach((group) => {
+    document.querySelectorAll(".card-grid, .hero-card-grid, .badge-grid, .steps-list, .blog-grid, .forms-grid, .faq-list, .top-rank-grid, .notification-stack, .ranking-preview-grid, .reward-badge-grid, tbody").forEach((group) => {
       Array.from(group.children).forEach((child, index) => {
         child.style.setProperty("--stagger", index);
       });

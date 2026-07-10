@@ -18,6 +18,18 @@
   },
   "sections": [
     {
+      "type": "paths",
+      "tone": "section-soft",
+      "eyebrow": "Choose Your Path",
+      "title": "Start with the role that fits you today.",
+      "body": "Both paths are preview-only and free to register. No account, payment, or stored submission is created on this static website.",
+      "columns": 2,
+      "items": [
+        { "icon": "PL", "title": "Player path", "body": "Tell us what you want to play, where you are available, and which ranking or reward updates matter to you." },
+        { "icon": "VN", "title": "Venue path", "body": "Share your venue details, activity capacity, hosting potential, and safety agreement for future review." }
+      ]
+    },
+    {
       "id": "registration-forms",
       "type": "forms",
       "tone": "section-white",

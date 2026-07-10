@@ -21,8 +21,10 @@
     {
       "type": "signin",
       "tone": "section-white",
+      "label": "Coming soon",
       "title": "Player accounts, rankings, and rewards profiles are coming soon.",
       "body": "Register now and we'll notify you when sign-in access is available. No login form, password field, local storage, or authentication logic is active on this preview page.",
+      "notes": ["No password field", "No authentication logic", "Register for updates"],
       "actions": [
         { "label": "Register", "href": "/register/" },
         { "label": "Back to Home", "href": "/", "variant": "btn-outline" }

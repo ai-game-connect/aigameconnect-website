@@ -5,6 +5,13 @@
     "body": "اخبرنا ماذا تريد أن تلعب، أين تلعب، وكيف تريد المشاركة.",
     "foundingLine": "سجل الآن كلاعب مؤسس واحصل على أولوية الدعوات عندما تبدأ المباريات في منطقتك.",
     "pricingLine": "التسجيل والانضمام للمجتمع المبكر مجاني. وأي تكلفة خاصة بالمكان أو بطولة أو ميزة إضافية مستقبلا ستكون واضحة قبل التأكيد.",
+    "sections": [
+      { "title": "البيانات الأساسية", "fields": ["full_name", "whatsapp", "age_range"] },
+      { "title": "اهتمامات النشاط", "fields": ["activities", "looking_to", "skill_level"] },
+      { "title": "المنطقة والتوفر", "fields": ["city_area", "preferred_days", "preferred_time"] },
+      { "title": "تحديثات الترتيب والمكافآت", "fields": ["notifications"] },
+      { "title": "ملاحظات", "fields": ["notes"] }
+    ],
     "submitLabel": "معاينة تسجيل اللاعب",
     "confirmation": "شكرا لك. هذا نموذج معاينة فقط. يجب ربط نموذج خارجي قبل الإطلاق.",
     "fields": [
@@ -27,6 +34,14 @@
     "body": "شارك التفاصيل المطلوبة لمراجعة المكان كشريك معتمد مستقبلا.",
     "foundingLine": "شركاء الأماكن المؤسسون يحصلون على ظهور مفضل ووصول مبكر لتفاصيل الأسعار قبل الإطلاق العام.",
     "pricingLine": "خطط الأماكن ستكون بسيطة وواضحة، وتفاصيل الأسعار ستتم مشاركتها بعد تسجيل المكان ومراجعته.",
+    "sections": [
+      { "title": "أساسيات المكان", "fields": ["venue_name", "venue_type"] },
+      { "title": "الموقع والتواصل", "fields": ["city_area", "maps_location", "contact_person", "whatsapp"] },
+      { "title": "الأنشطة والسعة", "fields": ["available_activities", "working_hours", "capacity"] },
+      { "title": "الأسعار وإمكانية الاستضافة", "fields": ["pricing_details", "host_competitions"] },
+      { "title": "اتفاق السلامة", "fields": ["safety_agreement"] },
+      { "title": "ملاحظات", "fields": ["notes"] }
+    ],
     "submitLabel": "معاينة تسجيل المكان",
     "confirmation": "شكرا لك. هذا نموذج معاينة فقط. يجب ربط نموذج خارجي قبل الإطلاق.",
     "fields": [

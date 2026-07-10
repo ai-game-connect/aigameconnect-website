@@ -34,7 +34,7 @@
       "body": "Players often rely on scattered chats, unclear plans, and uncertain places. AI Game Connect is being built to make the path clearer: choose the activity, find approved places, compete fairly, track ranking, and get rewarded for showing up. Not another group chat — track your rank, get matched to real games, and get rewarded for showing up."
     },
     {
-      "type": "cards",
+      "type": "timeline",
       "tone": "section-white",
       "eyebrow": "The Ecosystem",
       "title": "Connect → Compete → Rank → Reward",

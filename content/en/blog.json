@@ -24,6 +24,7 @@
       "eyebrow": "Featured Post",
       "title": "How AI Game Connect can turn casual plans into organized play.",
       "body": "A future story about moving from scattered group chats to clear requests, approved places, rankings, and rewards.",
+      "featured": true,
       "items": [
         { "category": "Featured", "title": "From chat plans to real-life play", "body": "A placeholder feature about organizing safe, approved games with clear times and places.", "meta": "Preview feature" }
       ]
@@ -50,6 +51,13 @@
         { "category": "Venue spotlights", "title": "How approved places can host better play", "body": "A future venue story about clear space, time, and rules.", "meta": "Preview post" },
         { "category": "Safety/fair play", "title": "The rules that keep competition healthy", "body": "A future post about no betting, no gambling, and approved places only.", "meta": "Preview post" }
       ]
+    },
+    {
+      "type": "notice",
+      "tone": "section-white",
+      "eyebrow": "Coming Soon",
+      "title": "A real content hub is coming later.",
+      "body": "These posts are placeholders for the future content direction. No CMS or blog backend is active on this static preview."
     },
     {
       "type": "notice",

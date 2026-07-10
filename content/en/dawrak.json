@@ -9,15 +9,17 @@
     "body": "Dawrak is being built to help players request games, receive updates, discover approved venues, and follow rankings and rewards more easily.",
     "actions": [
       { "label": "Register to Use Dawrak", "href": "/register/" },
-      { "label": "See How It Works", "href": "#request-flow", "variant": "btn-outline" }
+      { "label": "Register as Player", "href": "/register/#player", "variant": "btn-outline" }
     ],
     "chat": {
       "status": "Frontend mockup only",
       "title": "Dawrak preview",
       "messages": [
-        { "from": "bot", "text": "Tell me what you want to play, where, and when." },
-        { "from": "user", "text": "Padel in New Cairo this weekend." },
-        { "from": "bot", "text": "I can help prepare a request and show approved venue options when live." }
+        { "from": "user", "text": "I want to play padel tomorrow in New Cairo." },
+        { "from": "bot", "text": "Possible game request found near you." },
+        { "from": "bot", "text": "Venue location available." },
+        { "from": "bot", "text": "Your ranking moved up." },
+        { "from": "bot", "text": "Reward update available." }
       ]
     }
   },
@@ -54,16 +56,17 @@
       ]
     },
     {
-      "type": "cards",
+      "type": "notifications",
       "tone": "section-white",
       "eyebrow": "Notifications & Updates",
       "title": "Helpful updates without pretending the system is live.",
       "body": "Dawrak notifications shown here are examples of planned behavior.",
       "columns": 3,
       "items": [
-        { "icon": "GR", "title": "Game request update", "body": "A future update when players are looking for the same activity." },
-        { "icon": "EV", "title": "Competition reminder", "body": "A future reminder for dates, times, and approved venue details." },
-        { "icon": "RR", "title": "Reward notification", "body": "A future alert when rewards or badges become available." }
+        { "icon": "GR", "title": "Possible game request found near you", "body": "A future update when players are looking for the same activity." },
+        { "icon": "EV", "title": "Venue location available", "body": "A future reminder with approved venue details." },
+        { "icon": "RK", "title": "Your ranking moved up", "body": "A future ranking update after verified participation." },
+        { "icon": "RR", "title": "Reward update available", "body": "A future alert when rewards or badges become available." }
       ]
     },
     {

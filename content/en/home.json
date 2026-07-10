@@ -99,12 +99,15 @@
       "eyebrow": "Leaderboard Preview",
       "title": "Track your rank across the games you love.",
       "body": "Preview only — real rankings and player profiles are coming soon.",
+      "previewLabel": "Preview only — live ranking profiles are coming soon.",
+      "sampleLabel": "Sample",
+      "verifiedLabel": "Verified preview",
       "headers": ["Rank", "Player", "Activity", "Area", "Points"],
       "rows": [
-        ["#1", "Amina", "Padel", "New Cairo", "1,240"],
-        ["#2", "Youssef", "Football", "Maadi", "1,110"],
-        ["#3", "Omar", "Chess", "Nasr City", "980"],
-        ["#4", "Nour", "Board games", "Heliopolis", "860"]
+        ["#1", "Sample Player A", "Padel", "New Cairo", "1,240"],
+        ["#2", "Sample Player B", "Football", "Maadi", "1,110"],
+        ["#3", "Sample Player C", "Chess", "Nasr City", "980"],
+        ["#4", "Sample Player D", "Board games", "Heliopolis", "860"]
       ],
       "cta": { "label": "View Leaderboard", "href": "/leaderboard/" }
     },

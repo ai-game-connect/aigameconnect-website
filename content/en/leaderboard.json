@@ -44,13 +44,16 @@
       "eyebrow": "Leaderboard Preview",
       "title": "Preview only — live ranking profiles are coming soon.",
       "body": "Sample rows show the planned structure without claiming live results.",
+      "previewLabel": "Preview only — live ranking profiles are coming soon.",
+      "sampleLabel": "Sample",
+      "verifiedLabel": "Verified preview",
       "headers": ["Rank", "Player", "Activity", "Area", "Points"],
       "rows": [
-        ["#1", "Amina", "Padel", "New Cairo", "1,240"],
-        ["#2", "Youssef", "Football", "Maadi", "1,110"],
-        ["#3", "Omar", "Chess", "Nasr City", "980"],
-        ["#4", "Nour", "Board games", "Heliopolis", "860"],
-        ["#5", "Kareem", "Dominoes", "Alexandria", "790"]
+        ["#1", "Sample Player A", "Padel", "New Cairo", "1,240"],
+        ["#2", "Sample Player B", "Football", "Maadi", "1,110"],
+        ["#3", "Sample Player C", "Chess", "Nasr City", "980"],
+        ["#4", "Sample Player D", "Board games", "Heliopolis", "860"],
+        ["#5", "Sample Player E", "Dominoes", "Alexandria", "790"]
       ]
     },
     {
@@ -76,6 +79,18 @@
       "title": "Static filters for the preview.",
       "body": "These controls show the future interface direction and do not filter live data yet.",
       "items": ["All", "Football", "Padel", "Chess", "PlayStation", "Board games", "Dominoes", "Area", "Venue"]
+    },
+    {
+      "type": "rankingPreview",
+      "tone": "section-white",
+      "eyebrow": "Area / Venue Preview",
+      "title": "Rankings can become local and venue-aware.",
+      "body": "These cards show how future rankings may be grouped without using live data.",
+      "items": [
+        { "icon": "AR", "title": "New Cairo padel preview", "body": "Sample local ranking view by area.", "meta": "Preview only" },
+        { "icon": "VN", "title": "Approved venue spotlight", "body": "Sample venue ranking view for reviewed places.", "meta": "Verified venue" },
+        { "icon": "FP", "title": "Fair play score", "body": "Sample trust signal for healthy competition.", "meta": "Verified activity" }
+      ]
     },
     {
       "type": "cards",

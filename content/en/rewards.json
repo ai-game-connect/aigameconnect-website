@@ -51,7 +51,7 @@
       ]
     },
     {
-      "type": "cards",
+      "type": "rewardBadges",
       "tone": "section-white",
       "eyebrow": "Player Badges",
       "title": "Badges can make progress visible.",
@@ -94,8 +94,8 @@
       "type": "notice",
       "tone": "section-blue",
       "eyebrow": "Coming Soon Disclaimer",
-      "title": "Rewards will launch gradually.",
-      "body": "Rewards will launch gradually as the player and venue network grows. Founding members get early access and bonus recognition. Register now to receive updates."
+      "title": "Coming Soon: rewards will launch gradually.",
+      "body": "Rewards will launch gradually as the player and venue network grows. Founding members get early updates and bonus recognition. Register now to receive updates."
     },
     {
       "type": "notice",
