@@ -151,6 +151,11 @@
   };
   const sectionSemanticClass = (section) => {
     const source = `${section.id || ""} ${section.type || ""} ${section.eyebrow || ""} ${section.title || ""}`.toLowerCase();
+    if (section.type === "marquee") return "section-marquee-zone";
+    if (section.type === "manifesto") return "section-manifesto-zone";
+    if (/audience paths|choose your path|اختار دورك/.test(source)) return "section-audience-zone";
+    if (/real-play moments|what real play|اللعب الحقيقي/.test(source)) return "section-moments-zone";
+    if (/founding community|founding player|مجتمع اللاعبين/.test(source)) return "section-final-cta-zone";
     if (/safety|fair play|verification|verified|السلامة|اللعب النظيف|التحقق|المؤكدة/.test(source)) return "section-safety-zone";
     if (/steps|how it works|كيف تعمل/.test(source)) return "section-process-zone";
     if (/registration|register|forms|questionnaire|cta|التسجيل|سجل|دعوة/.test(source)) return "section-register-zone";
@@ -493,6 +498,15 @@
     container.append(ctaRow);
   };
 
+  const renderCommunityStrip = (items) => {
+    const strip = make("div", "hero-community-strip");
+    strip.setAttribute("aria-label", language === "ar" ? "حالة المجتمع" : "Community status");
+    (items || []).forEach((item, index) => {
+      strip.append(make("span", index === 0 ? "community-pill is-open" : "community-pill", item));
+    });
+    return strip;
+  };
+
   const renderHeroVisual = (hero) => {
     if (hero.chat) {
       return renderChatMockup(hero.chat, true);
@@ -534,6 +548,9 @@
       badge.append(document.createTextNode(hero.badge));
       copy.append(badge);
     }
+    if (hero.communityStrip) {
+      copy.append(renderCommunityStrip(hero.communityStrip));
+    }
     if (hero.actions) {
       const actionRow = make("div", "hero-actions");
       hero.actions.forEach((action, index) => {
@@ -559,6 +576,46 @@
       grid.append(renderCard(item, section.cardClass || "feature-card"));
     });
     return grid;
+  };
+
+  const renderMarquee = (section) => {
+    const marquee = make("div", "activity-marquee");
+    const track = make("div", "marquee-track");
+    const items = section.items || [];
+    [...items, ...items].forEach((item, index) => {
+      const pill = make("span", "marquee-item", item);
+      if (index >= items.length) pill.setAttribute("aria-hidden", "true");
+      track.append(pill);
+    });
+    marquee.append(track);
+    return marquee;
+  };
+
+  const renderManifesto = (section) => {
+    const panel = make("div", "manifesto-panel");
+    const copy = make("div", "manifesto-copy");
+    if (section.kicker) copy.append(make("p", "manifesto-kicker", section.kicker));
+    if (section.statementLines) {
+      const title = make("h2", "manifesto-title");
+      section.statementLines.forEach((line) => title.append(make("span", "", line)));
+      copy.append(title);
+    }
+    if (section.body) copy.append(make("p", "manifesto-body", section.body));
+    if (section.badges) {
+      const badges = make("div", "manifesto-badges");
+      section.badges.forEach((item) => badges.append(make("span", "manifesto-badge", item)));
+      copy.append(badges);
+    }
+
+    const signal = make("div", "manifesto-signal");
+    (section.signal || []).forEach((item) => {
+      const dot = make("span", `manifesto-dot theme-${iconTheme(item)}`);
+      dot.append(renderIcon(item));
+      dot.append(make("strong", "", item.title));
+      signal.append(dot);
+    });
+    panel.append(copy, signal);
+    return panel;
   };
 
   const renderBadges = (section) => {
@@ -917,6 +974,10 @@
       case "paths":
       case "timeline":
         return renderCards(section);
+      case "marquee":
+        return renderMarquee(section);
+      case "manifesto":
+        return renderManifesto(section);
       case "badges":
         return renderBadges(section);
       case "steps":
@@ -954,7 +1015,8 @@
     const node = make("section", `section reveal section-${section.type || "cards"} ${section.tone || ""} ${sectionSemanticClass(section)}`);
     if (section.id) node.id = section.id;
     const container = make("div", `section-container ${section.layout || ""}`);
-    if (section.type !== "signin") {
+    const rendersOwnHeader = ["signin", "marquee", "manifesto"].includes(section.type);
+    if (!rendersOwnHeader && (section.eyebrow || section.title || section.body || section.note)) {
       container.append(sectionHeader(section));
     }
     container.append(renderSectionBody(section, data));
@@ -976,7 +1038,7 @@
 
   const setupReveal = () => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    document.querySelectorAll(".card-grid, .hero-card-grid, .badge-grid, .steps-list, .blog-grid, .forms-grid, .faq-list, .top-rank-grid, .notification-stack, .ranking-preview-grid, .reward-badge-grid, tbody").forEach((group) => {
+    document.querySelectorAll(".card-grid, .hero-card-grid, .hero-community-strip, .badge-grid, .steps-list, .blog-grid, .forms-grid, .faq-list, .top-rank-grid, .notification-stack, .ranking-preview-grid, .reward-badge-grid, .manifesto-badges, .manifesto-signal, tbody").forEach((group) => {
       Array.from(group.children).forEach((child, index) => {
         child.style.setProperty("--stagger", index);
       });

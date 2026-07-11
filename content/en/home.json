@@ -11,22 +11,91 @@
     "badge": "Founding Player & Venue spots open — early members get priority access to tournaments and rewards.",
     "trust": "No betting. No gambling. Approved places only.",
     "actions": [
-      { "label": "Register", "href": "/register/", "variant": "btn-primary" },
-      { "label": "Explore How It Works", "href": "#how-it-works", "variant": "btn-outline" }
+      {
+        "label": "Register",
+        "href": "/register/",
+        "variant": "btn-primary"
+      },
+      {
+        "label": "Explore How It Works",
+        "href": "#how-it-works",
+        "variant": "btn-outline"
+      }
     ],
     "visualCards": [
-      { "icon": "FB", "title": "Football", "body": "Teams, fields, and local play." },
-      { "icon": "PD", "title": "Padel", "body": "Court requests and doubles." },
-      { "icon": "BG", "title": "Board games", "body": "Venue-hosted tables." },
-      { "icon": "PS", "title": "PlayStation", "body": "Friendly competitions." },
-      { "icon": "CH", "title": "Chess", "body": "Skill-based ranking." },
-      { "icon": "DM", "title": "Dominoes", "body": "Organized real-life play." },
-      { "icon": "01", "title": "Leaderboard", "body": "Preview ranking tables." },
-      { "icon": "RW", "title": "Rewards", "body": "Badges and future offers." },
-      { "icon": "OK", "title": "Approved venue", "body": "Clear place and rules." }
+      {
+        "icon": "FB",
+        "title": "Football",
+        "body": "Teams, fields, and local play."
+      },
+      {
+        "icon": "PD",
+        "title": "Padel",
+        "body": "Court requests and doubles."
+      },
+      {
+        "icon": "BG",
+        "title": "Board games",
+        "body": "Venue-hosted tables."
+      },
+      {
+        "icon": "PS",
+        "title": "PlayStation",
+        "body": "Friendly competitions."
+      },
+      {
+        "icon": "CH",
+        "title": "Chess",
+        "body": "Skill-based ranking."
+      },
+      {
+        "icon": "DM",
+        "title": "Dominoes",
+        "body": "Organized real-life play."
+      },
+      {
+        "icon": "01",
+        "title": "Leaderboard",
+        "body": "Preview ranking tables."
+      },
+      {
+        "icon": "RW",
+        "title": "Rewards",
+        "body": "Badges and future offers."
+      },
+      {
+        "icon": "OK",
+        "title": "Approved venue",
+        "body": "Clear place and rules."
+      }
+    ],
+    "communityStrip": [
+      "Founding registrations open",
+      "Players",
+      "Venues",
+      "Rankings",
+      "Rewards",
+      "Approved places only"
     ]
   },
   "sections": [
+    {
+      "id": "community-pulse",
+      "type": "marquee",
+      "tone": "section-white",
+      "items": [
+        "Football matches",
+        "Padel games",
+        "Board games",
+        "PlayStation",
+        "Chess",
+        "Dominoes",
+        "Approved venues",
+        "Leaderboard movement",
+        "Reward updates",
+        "Clear rules"
+      ]
+    },
     {
       "id": "how-it-works",
       "type": "cards",
@@ -36,12 +105,97 @@
       "body": "A simple loop for discovering activities, joining trusted places, competing fairly, and tracking progress.",
       "columns": 4,
       "items": [
-        { "icon": "01", "title": "Connect", "body": "Find players, venues, fields, courts, and game opportunities around your area." },
-        { "icon": "02", "title": "Compete", "body": "Join organized matches and competitions with clear rules, times, and locations." },
-        { "icon": "03", "title": "Rank", "body": "Track progress across the activities you love through fair, verified participation." },
-        { "icon": "04", "title": "Reward", "body": "Unlock recognition, badges, partner offers, and future rewards as the network grows." }
+        {
+          "icon": "01",
+          "title": "Connect",
+          "body": "Find players, venues, fields, courts, and game opportunities around your area."
+        },
+        {
+          "icon": "02",
+          "title": "Compete",
+          "body": "Join organized matches and competitions with clear rules, times, and locations."
+        },
+        {
+          "icon": "03",
+          "title": "Rank",
+          "body": "Track progress across the activities you love through fair, verified participation."
+        },
+        {
+          "icon": "04",
+          "title": "Reward",
+          "body": "Unlock recognition, badges, partner offers, and future rewards as the network grows."
+        }
       ],
-      "cta": { "label": "Start by Registering", "href": "/register/" }
+      "cta": {
+        "label": "Start by Registering",
+        "href": "/register/"
+      }
+    },
+    {
+      "id": "movement-manifesto",
+      "type": "manifesto",
+      "tone": "section-soft",
+      "kicker": "The movement",
+      "statementLines": [
+        "This Is Not Another Group Chat.",
+        "This Is Organized Real-Life Play."
+      ],
+      "body": "AI Game Connect is building a safer way for players to find real games, compete in approved places, track rankings, and unlock future rewards - with clear times, locations, pricing, and rules.",
+      "badges": [
+        "Approved places only",
+        "Clear times",
+        "Clear locations",
+        "Clear pricing",
+        "Clear rules"
+      ],
+      "signal": [
+        {
+          "icon": "OK",
+          "title": "Approved places"
+        },
+        {
+          "icon": "RQ",
+          "title": "Organized play"
+        },
+        {
+          "icon": "RW",
+          "title": "Future rewards"
+        }
+      ],
+      "cta": {
+        "label": "Register",
+        "href": "/register/"
+      }
+    },
+    {
+      "id": "audience-paths",
+      "type": "paths",
+      "tone": "section-white",
+      "eyebrow": "Audience paths",
+      "title": "Choose Your Path Into the Ecosystem",
+      "body": "Start from the role that fits how you want to help the community grow.",
+      "columns": 3,
+      "items": [
+        {
+          "icon": "PL",
+          "title": "Players",
+          "body": "Find games, compete, track ranking, and receive reward updates."
+        },
+        {
+          "icon": "VN",
+          "title": "Venues",
+          "body": "Receive organized player demand and trusted traffic through approved spaces."
+        },
+        {
+          "icon": "CM",
+          "title": "Competition Partners",
+          "body": "Support future tournaments, rewards, and community activity as the network grows."
+        }
+      ],
+      "cta": {
+        "label": "Register",
+        "href": "/register/"
+      }
     },
     {
       "type": "activities",
@@ -51,13 +205,82 @@
       "body": "Start with the real-life competitive activities players already love.",
       "columns": 4,
       "items": [
-        { "icon": "FB", "title": "Football", "body": "Teams, fields, challenges, and local tournaments." },
-        { "icon": "PD", "title": "Padel", "body": "Court-based matches, doubles, and area ranking." },
-        { "icon": "BG", "title": "Board games", "body": "Social, strategic, and venue-hosted game nights." },
-        { "icon": "PS", "title": "PlayStation", "body": "Friendly competitions and approved venue events." },
-        { "icon": "CH", "title": "Chess", "body": "Skill-based play, rankings, and fair competition." },
-        { "icon": "DM", "title": "Dominoes", "body": "Organized tables, verified results, and local play." },
-        { "icon": "+", "title": "More activities coming soon.", "body": "The ecosystem can grow with safe, approved real-life play." }
+        {
+          "icon": "FB",
+          "title": "Football",
+          "body": "Teams, fields, challenges, and local tournaments."
+        },
+        {
+          "icon": "PD",
+          "title": "Padel",
+          "body": "Court-based matches, doubles, and area ranking."
+        },
+        {
+          "icon": "BG",
+          "title": "Board games",
+          "body": "Social, strategic, and venue-hosted game nights."
+        },
+        {
+          "icon": "PS",
+          "title": "PlayStation",
+          "body": "Friendly competitions and approved venue events."
+        },
+        {
+          "icon": "CH",
+          "title": "Chess",
+          "body": "Skill-based play, rankings, and fair competition."
+        },
+        {
+          "icon": "DM",
+          "title": "Dominoes",
+          "body": "Organized tables, verified results, and local play."
+        },
+        {
+          "icon": "+",
+          "title": "More activities coming soon.",
+          "body": "The ecosystem can grow with safe, approved real-life play."
+        }
+      ]
+    },
+    {
+      "id": "real-play-moments",
+      "type": "cards",
+      "tone": "section-soft",
+      "eyebrow": "Real-play moments",
+      "title": "What Real Play Can Look Like",
+      "body": "Small, clear moments the ecosystem is designed to support as the community grows.",
+      "columns": 3,
+      "items": [
+        {
+          "icon": "FB",
+          "title": "A football match after work",
+          "body": "Players can request nearby fields and clear times."
+        },
+        {
+          "icon": "PD",
+          "title": "A padel game with new players",
+          "body": "Court requests can connect doubles without scattered planning."
+        },
+        {
+          "icon": "CH",
+          "title": "A chess challenge at an approved venue",
+          "body": "Skill-based play can happen in a trusted public place."
+        },
+        {
+          "icon": "PS",
+          "title": "A PlayStation competition with clear rules",
+          "body": "Friendly competition can stay organized and transparent."
+        },
+        {
+          "icon": "UP",
+          "title": "A leaderboard update after verified play",
+          "body": "Future ranking movement can follow confirmed participation."
+        },
+        {
+          "icon": "RW",
+          "title": "A reward notification for active players",
+          "body": "Future rewards can recognize consistent, fair activity."
+        }
       ]
     },
     {
@@ -68,14 +291,41 @@
       "body": "Dawrak is being built to make game requests, updates, venue details, rankings, and rewards easier to follow.",
       "columns": 3,
       "items": [
-        { "icon": "RQ", "title": "Request a game", "body": "Share what you want to play, where, and when." },
-        { "icon": "IN", "title": "Receive game requests", "body": "Get matched with players looking for the same activity." },
-        { "icon": "LOC", "title": "Get venue location", "body": "See approved place details before confirmation." },
-        { "icon": "TM", "title": "Competition dates/times", "body": "Follow upcoming competition schedules when they launch." },
-        { "icon": "UP", "title": "Leaderboard movement", "body": "Receive future updates after verified participation." },
-        { "icon": "RW", "title": "Rewards notifications", "body": "Get notified when badges and rewards become available." }
+        {
+          "icon": "RQ",
+          "title": "Request a game",
+          "body": "Share what you want to play, where, and when."
+        },
+        {
+          "icon": "IN",
+          "title": "Receive game requests",
+          "body": "Get matched with players looking for the same activity."
+        },
+        {
+          "icon": "LOC",
+          "title": "Get venue location",
+          "body": "See approved place details before confirmation."
+        },
+        {
+          "icon": "TM",
+          "title": "Competition dates/times",
+          "body": "Follow upcoming competition schedules when they launch."
+        },
+        {
+          "icon": "UP",
+          "title": "Leaderboard movement",
+          "body": "Receive future updates after verified participation."
+        },
+        {
+          "icon": "RW",
+          "title": "Rewards notifications",
+          "body": "Get notified when badges and rewards become available."
+        }
       ],
-      "cta": { "label": "Explore Dawrak", "href": "/dawrak/" }
+      "cta": {
+        "label": "Explore Dawrak",
+        "href": "/dawrak/"
+      }
     },
     {
       "type": "cards",
@@ -85,13 +335,36 @@
       "body": "Tournament content stays honest, local, and connected to approved venues.",
       "columns": 5,
       "items": [
-        { "icon": "LT", "title": "Local tournaments", "body": "Area-based competitions for nearby communities." },
-        { "icon": "VH", "title": "Venue-hosted competitions", "body": "Events organized with approved partner venues." },
-        { "icon": "AC", "title": "Area challenges", "body": "Friendly neighborhood and city-area challenges." },
-        { "icon": "SC", "title": "Seasonal competitions", "body": "Future seasonal campaigns as the network grows." },
-        { "icon": "SP", "title": "Sponsored competitions", "body": "Partner-backed competitions when the ecosystem is ready." }
+        {
+          "icon": "LT",
+          "title": "Local tournaments",
+          "body": "Area-based competitions for nearby communities."
+        },
+        {
+          "icon": "VH",
+          "title": "Venue-hosted competitions",
+          "body": "Events organized with approved partner venues."
+        },
+        {
+          "icon": "AC",
+          "title": "Area challenges",
+          "body": "Friendly neighborhood and city-area challenges."
+        },
+        {
+          "icon": "SC",
+          "title": "Seasonal competitions",
+          "body": "Future seasonal campaigns as the network grows."
+        },
+        {
+          "icon": "SP",
+          "title": "Sponsored competitions",
+          "body": "Partner-backed competitions when the ecosystem is ready."
+        }
       ],
-      "cta": { "label": "Register to Compete", "href": "/register/#player" }
+      "cta": {
+        "label": "Register to Compete",
+        "href": "/register/#player"
+      }
     },
     {
       "type": "leaderboard",
@@ -102,14 +375,47 @@
       "previewLabel": "Preview only — ranking profiles are coming soon.",
       "sampleLabel": "Sample",
       "verifiedLabel": "Verified preview",
-      "headers": ["Rank", "Player", "Activity", "Area", "Points"],
-      "rows": [
-        ["#1", "Sample Player A", "Padel", "New Cairo", "1,240"],
-        ["#2", "Sample Player B", "Football", "Maadi", "1,110"],
-        ["#3", "Sample Player C", "Chess", "Nasr City", "980"],
-        ["#4", "Sample Player D", "Board games", "Heliopolis", "860"]
+      "headers": [
+        "Rank",
+        "Player",
+        "Activity",
+        "Area",
+        "Points"
       ],
-      "cta": { "label": "View Leaderboard", "href": "/leaderboard/" }
+      "rows": [
+        [
+          "#1",
+          "Sample Player A",
+          "Padel",
+          "New Cairo",
+          "1,240"
+        ],
+        [
+          "#2",
+          "Sample Player B",
+          "Football",
+          "Maadi",
+          "1,110"
+        ],
+        [
+          "#3",
+          "Sample Player C",
+          "Chess",
+          "Nasr City",
+          "980"
+        ],
+        [
+          "#4",
+          "Sample Player D",
+          "Board games",
+          "Heliopolis",
+          "860"
+        ]
+      ],
+      "cta": {
+        "label": "View Leaderboard",
+        "href": "/leaderboard/"
+      }
     },
     {
       "type": "cards",
@@ -119,14 +425,41 @@
       "body": "Rewards will grow gradually as more players, venues, and partners join.",
       "columns": 3,
       "items": [
-        { "icon": "VD", "title": "Venue discounts", "body": "Future discounts with approved partner venues." },
-        { "icon": "CP", "title": "Competition prizes", "body": "Recognition and prizes for verified events." },
-        { "icon": "PR", "title": "Player recognition", "body": "Badges and leaderboard-based recognition." },
-        { "icon": "BD", "title": "Badges", "body": "Profile badges for participation and fair play." },
-        { "icon": "PO", "title": "Partner offers", "body": "Offers from future trusted partners." },
-        { "icon": "LR", "title": "Leaderboard-based rewards", "body": "Rewards connected to verified ranking progress." }
+        {
+          "icon": "VD",
+          "title": "Venue discounts",
+          "body": "Future discounts with approved partner venues."
+        },
+        {
+          "icon": "CP",
+          "title": "Competition prizes",
+          "body": "Recognition and prizes for verified events."
+        },
+        {
+          "icon": "PR",
+          "title": "Player recognition",
+          "body": "Badges and leaderboard-based recognition."
+        },
+        {
+          "icon": "BD",
+          "title": "Badges",
+          "body": "Profile badges for participation and fair play."
+        },
+        {
+          "icon": "PO",
+          "title": "Partner offers",
+          "body": "Offers from future trusted partners."
+        },
+        {
+          "icon": "LR",
+          "title": "Leaderboard-based rewards",
+          "body": "Rewards connected to verified ranking progress."
+        }
       ],
-      "cta": { "label": "See Rewards", "href": "/rewards/" }
+      "cta": {
+        "label": "See Rewards",
+        "href": "/rewards/"
+      }
     },
     {
       "type": "cards",
@@ -136,11 +469,26 @@
       "body": "AI Game Connect helps venues become part of a trusted activity ecosystem.",
       "columns": 3,
       "items": [
-        { "icon": "MD", "title": "More Organized Demand", "body": "Stop relying on walk-ins. Get matched with players actively looking to book, compete, and return." },
-        { "icon": "BV", "title": "Built-In Visibility", "body": "Appear inside the ecosystem's activity, tournament, and leaderboard pages — not just a map pin." },
-        { "icon": "TV", "title": "Trusted, Verified Players", "body": "Every player agrees to the same safety standards you do — no betting, no gambling, no private arrangements." }
+        {
+          "icon": "MD",
+          "title": "More Organized Demand",
+          "body": "Stop relying on walk-ins. Get matched with players actively looking to book, compete, and return."
+        },
+        {
+          "icon": "BV",
+          "title": "Built-In Visibility",
+          "body": "Appear inside the ecosystem's activity, tournament, and leaderboard pages — not just a map pin."
+        },
+        {
+          "icon": "TV",
+          "title": "Trusted, Verified Players",
+          "body": "Every player agrees to the same safety standards you do — no betting, no gambling, no private arrangements."
+        }
       ],
-      "cta": { "label": "Register Your Venue", "href": "/register/#venue" }
+      "cta": {
+        "label": "Register Your Venue",
+        "href": "/register/#venue"
+      }
     },
     {
       "type": "badges",
@@ -148,7 +496,16 @@
       "eyebrow": "Safety",
       "title": "Safety & Clear Rules",
       "body": "No betting. No gambling. No poker. No private places. Approved venues, fields, courts, and activity spaces only. Clear time, location, pricing, and rules.",
-      "items": ["No betting", "No gambling", "No poker", "No private places", "Approved venues only", "Approved fields/courts", "Clear time/location", "Clear rules"]
+      "items": [
+        "No betting",
+        "No gambling",
+        "No poker",
+        "No private places",
+        "Approved venues only",
+        "Approved fields/courts",
+        "Clear time/location",
+        "Clear rules"
+      ]
     },
     {
       "type": "steps",
@@ -157,27 +514,71 @@
       "title": "From registration to rewards.",
       "body": "A clear preview flow for players and venues.",
       "items": [
-        { "step": "1", "title": "Register", "body": "Join as a player or register a venue for review." },
-        { "step": "2", "title": "Choose activities", "body": "Select the games and sports you care about." },
-        { "step": "3", "title": "Use Dawrak", "body": "Request games and receive helpful updates when available." },
-        { "step": "4", "title": "Join approved places", "body": "Play at approved venues, fields, and courts." },
-        { "step": "5", "title": "Compete", "body": "Take part in organized matches and competitions." },
-        { "step": "6", "title": "Track ranking", "body": "Follow preview ranking movement after verified play." },
-        { "step": "7", "title": "Get rewards", "body": "Unlock future badges, recognition, and offers." }
+        {
+          "step": "1",
+          "title": "Register",
+          "body": "Join as a player or register a venue for review."
+        },
+        {
+          "step": "2",
+          "title": "Choose activities",
+          "body": "Select the games and sports you care about."
+        },
+        {
+          "step": "3",
+          "title": "Use Dawrak",
+          "body": "Request games and receive helpful updates when available."
+        },
+        {
+          "step": "4",
+          "title": "Join approved places",
+          "body": "Play at approved venues, fields, and courts."
+        },
+        {
+          "step": "5",
+          "title": "Compete",
+          "body": "Take part in organized matches and competitions."
+        },
+        {
+          "step": "6",
+          "title": "Track ranking",
+          "body": "Follow preview ranking movement after verified play."
+        },
+        {
+          "step": "7",
+          "title": "Get rewards",
+          "body": "Unlock future badges, recognition, and offers."
+        }
       ]
     },
     {
       "type": "paths",
       "tone": "section-white",
-      "eyebrow": "Registration CTA",
-      "title": "Choose your early access path.",
-      "body": "Register as a player or tell us about your venue.",
+      "eyebrow": "Founding community",
+      "title": "Be Part of the Founding Player and Venue Community.",
+      "body": "Register early to help shape where AI Game Connect launches first, which activities get prioritized, and how rankings and rewards grow.",
       "columns": 2,
       "items": [
-        { "icon": "PL", "title": "Register as Player", "body": "Register now as a Founding Player and get priority invites once matches launch in your area." },
-        { "icon": "VN", "title": "Register Your Venue", "body": "Founding Venue Partners get preferred visibility and early access to pricing before public launch." }
+        {
+          "icon": "PL",
+          "title": "Founding Players",
+          "body": "Share what you want to play, where you are, and which activities should launch first."
+        },
+        {
+          "icon": "VN",
+          "title": "Founding Venues",
+          "body": "Tell us about your approved space and how players can use it for organized play."
+        }
       ],
-      "cta": { "label": "Go to Register", "href": "/register/" }
+      "cta": {
+        "label": "Register",
+        "href": "/register/"
+      },
+      "secondaryCta": {
+        "label": "Explore Dawrak",
+        "href": "/dawrak/",
+        "variant": "btn-outline"
+      }
     },
     {
       "type": "blogGrid",
@@ -186,11 +587,29 @@
       "title": "Guides, venue stories, and community updates.",
       "body": "Placeholder posts show the kind of content planned for launch.",
       "items": [
-        { "category": "Game guide", "title": "How to choose your first local competition", "body": "A future guide for players joining organized real-life play.", "meta": "Preview post" },
-        { "category": "Venue spotlight", "title": "What makes a venue ready for healthy competition", "body": "A future checklist for approved places and clear standards.", "meta": "Preview post" },
-        { "category": "Rewards", "title": "How badges can celebrate consistency", "body": "A future update about player recognition and fair play.", "meta": "Preview post" }
+        {
+          "category": "Game guide",
+          "title": "How to choose your first local competition",
+          "body": "A future guide for players joining organized real-life play.",
+          "meta": "Preview post"
+        },
+        {
+          "category": "Venue spotlight",
+          "title": "What makes a venue ready for healthy competition",
+          "body": "A future checklist for approved places and clear standards.",
+          "meta": "Preview post"
+        },
+        {
+          "category": "Rewards",
+          "title": "How badges can celebrate consistency",
+          "body": "A future update about player recognition and fair play.",
+          "meta": "Preview post"
+        }
       ],
-      "cta": { "label": "Read Blog", "href": "/blog/" }
+      "cta": {
+        "label": "Read Blog",
+        "href": "/blog/"
+      }
     },
     {
       "type": "faq",

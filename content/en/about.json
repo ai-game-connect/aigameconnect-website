@@ -8,14 +8,37 @@
     "title": "Building healthier real-life competition communities.",
     "body": "AI Game Connect is a preview ecosystem for safer real-life games, approved places, clear competition, rankings, and rewards.",
     "actions": [
-      { "label": "Register", "href": "/register/" },
-      { "label": "Explore Dawrak", "href": "/dawrak/", "variant": "btn-outline" }
+      {
+        "label": "Register",
+        "href": "/register/"
+      },
+      {
+        "label": "Explore Dawrak",
+        "href": "/dawrak/",
+        "variant": "btn-outline"
+      }
     ],
     "visualCards": [
-      { "icon": "CN", "title": "Connect", "body": "Find real players." },
-      { "icon": "CP", "title": "Compete", "body": "Join clear activities." },
-      { "icon": "RK", "title": "Rank", "body": "Track progress." },
-      { "icon": "RW", "title": "Reward", "body": "Unlock recognition." }
+      {
+        "icon": "CN",
+        "title": "Connect",
+        "body": "Find real players."
+      },
+      {
+        "icon": "CP",
+        "title": "Compete",
+        "body": "Join clear activities."
+      },
+      {
+        "icon": "RK",
+        "title": "Rank",
+        "body": "Track progress."
+      },
+      {
+        "icon": "RW",
+        "title": "Reward",
+        "body": "Unlock recognition."
+      }
     ]
   },
   "sections": [
@@ -30,8 +53,16 @@
       "type": "notice",
       "tone": "section-blue",
       "eyebrow": "Why AI Game Connect Exists",
-      "title": "Real-life play should be easier than endless planning.",
-      "body": "Players often rely on scattered chats, unclear plans, and uncertain places. AI Game Connect is being built to make the path clearer: choose the activity, find approved places, compete fairly, track ranking, and get rewarded for showing up. Not another group chat — track your rank, get matched to real games, and get rewarded for showing up."
+      "title": "This is not another group chat.",
+      "body": "The point is to move players from scattered planning into organized real-life play: approved places, clear times, known locations, visible pricing, shared rules, future rankings, and rewards that follow verified activity."
+    },
+    {
+      "id": "about-rules-matter",
+      "type": "notice",
+      "tone": "section-soft",
+      "eyebrow": "Why the rules matter",
+      "title": "Approved places, rankings, and rewards need the same clear standards.",
+      "body": "Approved places keep play public and accountable. Clear rules make future rankings and rewards easier to trust, because progress should come from verified play rather than private arrangements."
     },
     {
       "type": "timeline",
@@ -41,10 +72,26 @@
       "body": "Four simple ideas shape the product experience.",
       "columns": 4,
       "items": [
-        { "icon": "CN", "title": "Connect", "body": "Players find activities and approved places." },
-        { "icon": "CP", "title": "Compete", "body": "Matches and competitions have clear rules." },
-        { "icon": "RK", "title": "Rank", "body": "Verified activity can shape future rankings." },
-        { "icon": "RW", "title": "Reward", "body": "Progress can unlock recognition and future offers." }
+        {
+          "icon": "CN",
+          "title": "Connect",
+          "body": "Players find activities and approved places."
+        },
+        {
+          "icon": "CP",
+          "title": "Compete",
+          "body": "Matches and competitions have clear rules."
+        },
+        {
+          "icon": "RK",
+          "title": "Rank",
+          "body": "Verified activity can shape future rankings."
+        },
+        {
+          "icon": "RW",
+          "title": "Reward",
+          "body": "Progress can unlock recognition and future offers."
+        }
       ]
     },
     {
@@ -53,7 +100,16 @@
       "eyebrow": "Safety Principles",
       "title": "The rules are simple on purpose.",
       "body": "No betting. No gambling. No poker. No private places. Approved venues, fields, courts, and activity spaces only. Clear time, location, pricing, and rules.",
-      "items": ["No betting", "No gambling", "No poker", "No private places", "Approved venues only", "Approved fields/courts", "Clear time/location", "Clear rules"]
+      "items": [
+        "No betting",
+        "No gambling",
+        "No poker",
+        "No private places",
+        "Approved venues only",
+        "Approved fields/courts",
+        "Clear time/location",
+        "Clear rules"
+      ]
     },
     {
       "type": "cards",
@@ -63,9 +119,21 @@
       "body": "AI Game Connect helps players move from scattered plans to clear activity paths.",
       "columns": 3,
       "items": [
-        { "icon": "RQ", "title": "Request or join games", "body": "Share what you want to play and where." },
-        { "icon": "AV", "title": "Use approved places", "body": "Stay connected to venues, fields, and courts." },
-        { "icon": "RK", "title": "Track future progress", "body": "Prepare for ranking and rewards when profiles launch." }
+        {
+          "icon": "RQ",
+          "title": "Request or join games",
+          "body": "Share what you want to play and where."
+        },
+        {
+          "icon": "AV",
+          "title": "Use approved places",
+          "body": "Stay connected to venues, fields, and courts."
+        },
+        {
+          "icon": "RK",
+          "title": "Track future progress",
+          "body": "Prepare for ranking and rewards when profiles launch."
+        }
       ]
     },
     {
@@ -76,9 +144,21 @@
       "body": "Approved venues can become visible inside the activity ecosystem.",
       "columns": 3,
       "items": [
-        { "icon": "MD", "title": "More organized demand", "body": "Connect with players actively looking to book and return." },
-        { "icon": "BV", "title": "Built-in visibility", "body": "Appear in activity, competition, ranking, and reward contexts." },
-        { "icon": "TV", "title": "Trusted player standards", "body": "Players agree to clear safety expectations before launch." }
+        {
+          "icon": "MD",
+          "title": "More organized demand",
+          "body": "Connect with players actively looking to book and return."
+        },
+        {
+          "icon": "BV",
+          "title": "Built-in visibility",
+          "body": "Appear in activity, competition, ranking, and reward contexts."
+        },
+        {
+          "icon": "TV",
+          "title": "Trusted player standards",
+          "body": "Players agree to clear safety expectations before launch."
+        }
       ]
     },
     {
@@ -94,7 +174,10 @@
       "eyebrow": "CTA to Register",
       "title": "Join the early community.",
       "body": "Register as a player or venue partner and help shape the first approved activity network.",
-      "cta": { "label": "Register", "href": "/register/" }
+      "cta": {
+        "label": "Register",
+        "href": "/register/"
+      }
     },
     {
       "type": "faq",
