@@ -136,11 +136,15 @@
     }
     node.classList.add("framework-text");
     let lastIndex = 0;
+    let wordIndex = 0;
     String(text).replace(frameworkPattern, (match, _token, offset) => {
       if (offset > lastIndex) {
         node.append(make("span", "framework-separator", text.slice(lastIndex, offset)));
       }
-      node.append(make("span", `framework-word framework-${frameworkKey(match)}`, match));
+      const word = make("span", `framework-word framework-${frameworkKey(match)}`, match);
+      word.style.setProperty("--stagger", wordIndex);
+      wordIndex += 1;
+      node.append(word);
       lastIndex = offset + match.length;
       return match;
     });
@@ -507,42 +511,7 @@
     return strip;
   };
 
-  const renderHeroFrameworkVisual = (hero) => {
-    const steps = language === "ar"
-      ? [
-          { key: "connect", label: "العب" },
-          { key: "compete", label: "نافس" },
-          { key: "rank", label: "اترتب" },
-          { key: "reward", label: "واكسب" }
-        ]
-      : [
-          { key: "connect", label: "Connect" },
-          { key: "compete", label: "Compete" },
-          { key: "rank", label: "Rank" },
-          { key: "reward", label: "Reward" }
-        ];
-    const visual = make("div", "hero-visual hero-framework-visual");
-    visual.setAttribute("role", "group");
-    visual.setAttribute("aria-label", hero.visualLabel || (language === "ar" ? "مسار اللعب والمنافسة والترتيب والمكافآت" : "Connect, compete, rank, reward framework"));
-    const stack = make("div", "hero-framework-stack");
-    steps.forEach((step, index) => {
-      const card = make("div", `hero-framework-step framework-step-${step.key}`);
-      card.append(make("span", "framework-step-dot"));
-      card.append(make("strong", "", step.label));
-      stack.append(card);
-      if (index < steps.length - 1) {
-        stack.append(make("span", "framework-step-arrow", "↓"));
-      }
-    });
-    visual.append(stack);
-    return visual;
-  };
-
   const renderHeroVisual = (hero) => {
-    if (pageKey === "home") {
-      return renderHeroFrameworkVisual(hero);
-    }
-
     if (hero.chat) {
       return renderChatMockup(hero.chat, true);
     }
@@ -583,7 +552,7 @@
       badge.append(document.createTextNode(hero.badge));
       copy.append(badge);
     }
-    if (hero.communityStrip) {
+    if (hero.communityStrip && pageKey !== "home") {
       copy.append(renderCommunityStrip(hero.communityStrip));
     }
     if (hero.actions) {
@@ -600,7 +569,10 @@
       copy.append(trust);
     }
 
-    container.append(copy, renderHeroVisual(hero));
+    container.append(copy);
+    if (pageKey !== "home") {
+      container.append(renderHeroVisual(hero));
+    }
     section.append(container);
     return section;
   };
