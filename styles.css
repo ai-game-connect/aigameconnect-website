@@ -15,6 +15,11 @@
   --orange-soft: #fff0df;
   --green-soft: #eafff2;
   --gold-soft: #fff7d7;
+  --mist: #edf3f8;
+  --mist-strong: #dfeaf4;
+  --mist-navy: #d9e2ec;
+  --comfort-panel: rgba(255, 255, 255, 0.82);
+  --quiet-border: rgba(100, 116, 139, 0.2);
   --shadow-1: 0 8px 22px rgba(7, 17, 31, 0.08);
   --shadow-2: 0 18px 44px rgba(7, 17, 31, 0.12);
   --shadow-3: 0 28px 70px rgba(7, 17, 31, 0.16);
@@ -2303,6 +2308,511 @@ body[data-page="rewards"] .section-notice.section-soft .notice-card {
   font-weight: 800;
 }
 
+/* Pass 7B: calmer mid-tone system for secondary pages. */
+body:not([data-page="home"]) {
+  background:
+    linear-gradient(180deg, var(--mist) 0%, var(--soft-white) 42%, #eef4f7 100%);
+}
+
+body:not([data-page="home"]) .hero-section {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(47, 128, 255, 0.14), transparent 28%),
+    radial-gradient(circle at 82% 18%, rgba(7, 17, 31, 0.09), transparent 28%),
+    linear-gradient(135deg, #e6eef6 0%, var(--mist) 45%, #f7fafc 100%);
+}
+
+body[data-page="dawrak"] .hero-section {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(255, 138, 31, 0.16), transparent 28%),
+    radial-gradient(circle at 78% 28%, rgba(47, 128, 255, 0.16), transparent 30%),
+    linear-gradient(135deg, #e7eef6 0%, var(--mist) 48%, #fff7ee 100%);
+}
+
+body[data-page="leaderboard"] .hero-section {
+  background:
+    radial-gradient(circle at 20% 18%, rgba(246, 196, 79, 0.22), transparent 28%),
+    radial-gradient(circle at 78% 22%, rgba(7, 17, 31, 0.12), transparent 32%),
+    linear-gradient(135deg, #e5edf4 0%, #f5f0dc 52%, #f8fafc 100%);
+}
+
+body[data-page="rewards"] .hero-section {
+  background:
+    radial-gradient(circle at 22% 18%, rgba(246, 196, 79, 0.2), transparent 28%),
+    radial-gradient(circle at 78% 28%, rgba(36, 194, 106, 0.13), transparent 30%),
+    linear-gradient(135deg, #e8eff4 0%, #f7f2dd 52%, #f6fbf8 100%);
+}
+
+body[data-page="register"] .hero-section {
+  background:
+    radial-gradient(circle at 16% 22%, rgba(47, 128, 255, 0.14), transparent 28%),
+    radial-gradient(circle at 78% 26%, rgba(255, 138, 31, 0.14), transparent 30%),
+    linear-gradient(135deg, #e6eef6 0%, var(--mist) 48%, #fff5ea 100%);
+}
+
+body[data-page="about"] .hero-section,
+body[data-page="blog"] .hero-section,
+body[data-page="signin"] .hero-section,
+body[data-page="privacy"] .hero-section,
+body[data-page="terms"] .hero-section {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(47, 128, 255, 0.12), transparent 30%),
+    radial-gradient(circle at 78% 26%, rgba(7, 17, 31, 0.09), transparent 32%),
+    linear-gradient(135deg, #e4edf5 0%, var(--mist) 56%, #f8fafc 100%);
+}
+
+body:not([data-page="home"]) .hero-section::after {
+  opacity: 0.42;
+  filter: blur(26px);
+  animation-duration: 32s;
+}
+
+body:not([data-page="home"]) .section-white {
+  background: linear-gradient(180deg, #f7fafc 0%, var(--mist) 100%);
+}
+
+body:not([data-page="home"]) .section-soft {
+  background: linear-gradient(180deg, var(--mist) 0%, #eef4f7 100%);
+}
+
+body:not([data-page="home"]) .section-blue {
+  background: linear-gradient(180deg, var(--mist-strong) 0%, #f7fafc 100%);
+}
+
+body:not([data-page="home"]) .section-dawrak-zone,
+body:not([data-page="home"]) .section-tournaments-zone {
+  background: linear-gradient(180deg, #eef4f7 0%, #fbf4ec 100%);
+}
+
+body:not([data-page="home"]) .section-leaderboard-zone {
+  background: linear-gradient(180deg, #f2ecd6 0%, #eef4f7 100%);
+}
+
+body:not([data-page="home"]) .section-rewards-zone {
+  background: linear-gradient(180deg, #f4efd9 0%, #edf5ee 100%);
+}
+
+body:not([data-page="home"]) .section-register-zone {
+  background: linear-gradient(180deg, #e8f0f7 0%, #fbf4ec 100%);
+}
+
+body:not([data-page="home"]) .section-safety-zone,
+body:not([data-page="home"]) .section-venues-zone {
+  background: linear-gradient(180deg, #edf5ee 0%, var(--mist) 100%);
+}
+
+body:not([data-page="home"]) .section::before {
+  background: linear-gradient(90deg, transparent, rgba(100, 116, 139, 0.2), transparent);
+}
+
+body:not([data-page="home"]) .section-header {
+  max-width: 760px;
+}
+
+body:not([data-page="home"]) .hero-product-visual {
+  min-height: 430px;
+  padding: 16px;
+}
+
+body:not([data-page="home"]) .hero-product-visual::before {
+  background:
+    radial-gradient(circle at 24% 18%, rgba(47, 128, 255, 0.09), transparent 28%),
+    radial-gradient(circle at 72% 22%, rgba(7, 17, 31, 0.07), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.74) 0%, rgba(239, 245, 249, 0.88) 100%);
+  border-color: rgba(100, 116, 139, 0.2);
+  box-shadow: 0 22px 56px rgba(7, 17, 31, 0.1);
+  animation: none;
+}
+
+body:not([data-page="home"]) .hero-product-visual::after,
+body:not([data-page="home"]) .hero-connector {
+  opacity: 0.36;
+}
+
+body:not([data-page="home"]) .hero-logo-card {
+  width: min(100%, 440px);
+  background: rgba(255, 255, 255, 0.82);
+  border-color: var(--quiet-border);
+  box-shadow: 0 18px 44px rgba(7, 17, 31, 0.08);
+}
+
+body:not([data-page="home"]) .hero-card-grid {
+  gap: 10px;
+}
+
+body:not([data-page="home"]) .hero-card-grid .mini-card,
+body:not([data-page="home"]) .hero-card-grid .mini-card:nth-child(7),
+body:not([data-page="home"]) .hero-card-grid .mini-card:nth-child(8),
+body:not([data-page="home"]) .hero-card-grid .mini-card:nth-child(9) {
+  min-height: 98px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.84);
+  border-color: var(--quiet-border);
+  box-shadow: 0 10px 24px rgba(7, 17, 31, 0.06);
+  animation: none;
+}
+
+body:not([data-page="home"]) .mini-card h3 {
+  font-size: 0.9rem;
+}
+
+body:not([data-page="home"]) .mini-card p {
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+body:not([data-page="home"]) .feature-card,
+body:not([data-page="home"]) .blog-card,
+body:not([data-page="home"]) .notification-card,
+body:not([data-page="home"]) .ranking-preview-card,
+body:not([data-page="home"]) .reward-badge-card,
+body:not([data-page="home"]) .notice-card,
+body:not([data-page="home"]) .coming-card,
+body:not([data-page="home"]) .legal-block,
+body:not([data-page="home"]) .form-panel {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--quiet-border);
+  box-shadow: 0 12px 32px rgba(7, 17, 31, 0.07);
+}
+
+body:not([data-page="home"]) .feature-card::before,
+body:not([data-page="home"]) .blog-card::before,
+body:not([data-page="home"]) .notification-card::before,
+body:not([data-page="home"]) .ranking-preview-card::before,
+body:not([data-page="home"]) .reward-badge-card::before,
+body:not([data-page="home"]) .notice-card::before,
+body:not([data-page="home"]) .coming-card::before,
+body:not([data-page="home"]) .form-panel::before {
+  height: 3px;
+  opacity: 0.78;
+}
+
+body:not([data-page="home"]) .card-icon {
+  width: 38px;
+  height: 38px;
+  color: #2b5f9f;
+  background: #f2f6fa;
+  border-color: rgba(100, 116, 139, 0.18);
+}
+
+body:not([data-page="home"]) .card-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+body:not([data-page="home"]) .theme-orange .card-icon,
+body:not([data-page="home"]) .icon-orange {
+  color: #9a4b08;
+  background: #fff6ec;
+  border-color: #f6d6b7;
+}
+
+body:not([data-page="home"]) .theme-green .card-icon,
+body:not([data-page="home"]) .icon-green {
+  color: #0b6338;
+  background: #f1fbf5;
+  border-color: #c6efd6;
+}
+
+body:not([data-page="home"]) .theme-gold .card-icon,
+body:not([data-page="home"]) .icon-gold {
+  color: #7a5600;
+  background: #fff9df;
+  border-color: #f5e2a8;
+}
+
+body:not([data-page="home"]) .feature-card:hover,
+body:not([data-page="home"]) .blog-card:hover,
+body:not([data-page="home"]) .notification-card:hover,
+body:not([data-page="home"]) .ranking-preview-card:hover,
+body:not([data-page="home"]) .reward-badge-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 44px rgba(7, 17, 31, 0.09);
+}
+
+body:not([data-page="home"]) .badge-grid span {
+  background: rgba(255, 255, 255, 0.84);
+  border-color: var(--quiet-border);
+  box-shadow: none;
+}
+
+body:not([data-page="home"]) .badge-grid span:nth-child(n) {
+  background: rgba(255, 255, 255, 0.84);
+}
+
+body[data-page="dawrak"] .page-dawrak-hero .chat-mockup {
+  max-width: 660px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, #f5f8fb 100%);
+  border-color: rgba(47, 128, 255, 0.18);
+  box-shadow: 0 26px 70px rgba(7, 17, 31, 0.14);
+}
+
+body[data-page="dawrak"] .page-dawrak-hero .chat-mockup::before,
+body[data-page="dawrak"] .page-dawrak-hero .chat-mockup::after {
+  opacity: 0.38;
+}
+
+body[data-page="dawrak"] .chat-header {
+  background: #f4f8fb;
+  border-color: rgba(100, 116, 139, 0.2);
+}
+
+body[data-page="dawrak"] .chat-bubble.is-bot {
+  background: #edf5ff;
+}
+
+body[data-page="dawrak"] .chat-bubble.is-user {
+  background: #fff5ea;
+}
+
+body[data-page="dawrak"] .section-id-request-flow .section-container,
+body[data-page="dawrak"] .section-chat .section-container {
+  padding: clamp(18px, 3vw, 30px);
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(100, 116, 139, 0.16);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 52px rgba(7, 17, 31, 0.07);
+}
+
+body[data-page="dawrak"] .section-chat .chat-mockup {
+  max-width: 780px;
+  margin-inline: auto;
+}
+
+body[data-page="dawrak"] .notification-stack {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+body[data-page="dawrak"] .notification-card:nth-child(n) {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--quiet-border);
+}
+
+body[data-page="leaderboard"] .leaderboard-preview-stack {
+  padding: clamp(16px, 3vw, 28px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 250, 232, 0.62) 100%);
+  border: 1px solid rgba(122, 86, 0, 0.16);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 22px 56px rgba(7, 17, 31, 0.08);
+}
+
+body[data-page="leaderboard"] .top-rank-grid {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.64);
+  border: 1px solid rgba(122, 86, 0, 0.16);
+  border-radius: var(--radius-lg);
+  box-shadow: none;
+}
+
+body[data-page="leaderboard"] .top-rank-card {
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 30px rgba(7, 17, 31, 0.07);
+}
+
+body[data-page="leaderboard"] .top-rank-card.rank-1 {
+  background:
+    radial-gradient(circle at 82% 12%, rgba(246, 196, 79, 0.16), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #fff9df 100%);
+}
+
+body[data-page="leaderboard"] .top-rank-card.rank-2,
+body[data-page="leaderboard"] .top-rank-card.rank-3 {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--quiet-border);
+}
+
+body[data-page="leaderboard"] .table-card {
+  border-color: rgba(122, 86, 0, 0.16);
+  box-shadow: 0 14px 36px rgba(7, 17, 31, 0.07);
+}
+
+body[data-page="leaderboard"] th {
+  background: #f5ecd1;
+}
+
+body[data-page="leaderboard"] .ranking-preview-card:nth-child(n) {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--quiet-border);
+}
+
+body[data-page="rewards"] .reward-badge-grid {
+  padding: clamp(16px, 3vw, 26px);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(246, 196, 79, 0.12), transparent 26%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 249, 223, 0.62) 100%);
+  border: 1px solid rgba(122, 86, 0, 0.16);
+  border-radius: var(--radius-lg);
+}
+
+body[data-page="rewards"] .reward-badge-card {
+  min-height: 214px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(246, 196, 79, 0.12), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #fffdf4 100%);
+  box-shadow: 0 14px 34px rgba(7, 17, 31, 0.07);
+}
+
+body[data-page="rewards"] .reward-badge-card .card-icon {
+  width: 52px;
+  height: 52px;
+  box-shadow: none;
+}
+
+body[data-page="rewards"] .reveal.is-visible .reward-badge-card::after {
+  animation: none;
+}
+
+body[data-page="rewards"] .reward-badge-card:hover::after {
+  animation-duration: 700ms;
+}
+
+body[data-page="rewards"] .section-notice .notice-card,
+body[data-page="rewards"] .section-notice.section-soft .notice-card {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: var(--quiet-border);
+  box-shadow: 0 14px 34px rgba(7, 17, 31, 0.07);
+}
+
+body[data-page="register"] .section-paths .card-grid {
+  padding: clamp(14px, 2.5vw, 22px);
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid rgba(100, 116, 139, 0.16);
+  border-radius: var(--radius-lg);
+}
+
+body[data-page="register"] .section-id-registration-forms .section-container {
+  padding: clamp(16px, 3vw, 28px);
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(100, 116, 139, 0.16);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 52px rgba(7, 17, 31, 0.07);
+}
+
+body[data-page="register"] .forms-grid {
+  gap: 28px;
+}
+
+body[data-page="register"] .form-panel#player {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f9ff 100%);
+  border-color: #cfe3ff;
+}
+
+body[data-page="register"] .form-panel#player::before {
+  background: var(--blue);
+}
+
+body[data-page="register"] .form-panel#venue {
+  background: linear-gradient(180deg, #ffffff 0%, #fff8ef 55%, #f5fff8 100%);
+  border-color: #ffd4ad;
+}
+
+body[data-page="register"] .form-panel#venue::before {
+  background: linear-gradient(90deg, var(--orange), var(--green));
+}
+
+body[data-page="register"] .questionnaire-section {
+  padding: 18px;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(100, 116, 139, 0.16);
+}
+
+body[data-page="register"] input,
+body[data-page="register"] select,
+body[data-page="register"] textarea {
+  background-color: #fdfefe;
+}
+
+body[data-page="register"] .single-check {
+  background: #f2fbf6;
+}
+
+body[data-page="about"] .section-index-2 .notice-card {
+  padding: clamp(28px, 5vw, 54px);
+  background:
+    radial-gradient(circle at 88% 18%, rgba(47, 128, 255, 0.12), transparent 30%),
+    linear-gradient(135deg, #ffffff 0%, #edf3f8 100%);
+  border-color: rgba(47, 128, 255, 0.18);
+}
+
+body[data-page="about"] .section-index-2 .notice-card h3 {
+  max-width: 820px;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1.05;
+}
+
+body[data-page="about"] .section-id-about-rules-matter .notice-card {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(36, 194, 106, 0.22);
+}
+
+body[data-page="about"] .section-timeline .card-grid::before {
+  background: rgba(100, 116, 139, 0.22);
+}
+
+body[data-page="blog"] .blog-grid.is-featured-grid .blog-card {
+  min-height: 250px;
+  padding: clamp(24px, 4vw, 42px);
+  background:
+    radial-gradient(circle at 86% 12%, rgba(47, 128, 255, 0.1), transparent 28%),
+    linear-gradient(135deg, #ffffff 0%, #edf3f8 100%);
+  border-color: rgba(47, 128, 255, 0.18);
+}
+
+body[data-page="blog"] .blog-grid.is-featured-grid .blog-card h3 {
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
+}
+
+body[data-page="blog"] .filter-row {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(100, 116, 139, 0.16);
+  border-radius: var(--radius-lg);
+}
+
+body[data-page="blog"] .filter-chip {
+  box-shadow: none;
+}
+
+body[data-page="signin"] .section-signin .section-container {
+  display: grid;
+  place-items: center;
+}
+
+body[data-page="signin"] .coming-card {
+  max-width: 720px;
+  text-align: center;
+  justify-items: center;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(47, 128, 255, 0.12), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #edf3f8 100%);
+}
+
+body[data-page="signin"] .signin-note-grid {
+  justify-content: center;
+}
+
+body[data-page="privacy"] .legal-blocks,
+body[data-page="terms"] .legal-blocks {
+  max-width: 920px;
+  margin-inline: auto;
+}
+
+body[data-page="privacy"] .legal-status-card,
+body[data-page="terms"] .legal-status-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, #edf3f8 100%);
+  border-color: rgba(47, 128, 255, 0.18);
+  box-shadow: 0 14px 34px rgba(7, 17, 31, 0.07);
+}
+
+body[data-page="privacy"] .legal-block,
+body[data-page="terms"] .legal-block {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--quiet-border);
+}
+
 .site-footer {
   color: var(--white);
   background: var(--navy);
@@ -2412,6 +2922,10 @@ body[data-page="rewards"] .section-notice.section-soft .notice-card {
 
 .reveal.is-visible .reward-badge-card::after {
   animation: shine 1050ms ease 300ms both;
+}
+
+body[data-page="rewards"] .reveal.is-visible .reward-badge-card::after {
+  animation: none;
 }
 
 @keyframes riseIn {
@@ -2951,6 +3465,38 @@ body[data-page="rewards"] .section-notice.section-soft .notice-card {
 
   .footer-logo {
     width: 220px;
+  }
+}
+
+@media (max-width: 820px) {
+  body:not([data-page="home"]) .hero-product-visual {
+    min-height: 0;
+  }
+
+  body[data-page="dawrak"] .notification-stack,
+  body[data-page="leaderboard"] .top-rank-grid,
+  body[data-page="leaderboard"] .ranking-preview-grid,
+  body[data-page="rewards"] .reward-badge-grid,
+  body[data-page="register"] .forms-grid,
+  body[data-page="register"] .section-paths .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="dawrak"] .section-id-request-flow .section-container,
+  body[data-page="dawrak"] .section-chat .section-container,
+  body[data-page="leaderboard"] .leaderboard-preview-stack,
+  body[data-page="rewards"] .reward-badge-grid,
+  body[data-page="register"] .section-id-registration-forms .section-container,
+  body[data-page="register"] .section-paths .card-grid {
+    padding: 14px;
+  }
+
+  body[data-page="about"] .section-index-2 .notice-card h3 {
+    font-size: 2rem;
+  }
+
+  body[data-page="blog"] .filter-row {
+    padding: 10px;
   }
 }
 

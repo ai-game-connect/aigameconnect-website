@@ -1011,8 +1011,9 @@
     }
   };
 
-  const renderSection = (section, data) => {
-    const node = make("section", `section reveal section-${section.type || "cards"} ${section.tone || ""} ${sectionSemanticClass(section)}`);
+  const renderSection = (section, data, index = 0) => {
+    const idClass = section.id ? `section-id-${classToken(section.id)}` : "";
+    const node = make("section", `section reveal section-${section.type || "cards"} section-index-${index + 1} ${index === 0 ? "section-first" : ""} ${idClass} ${section.tone || ""} ${sectionSemanticClass(section)}`);
     if (section.id) node.id = section.id;
     const container = make("div", `section-container ${section.layout || ""}`);
     const rendersOwnHeader = ["signin", "marquee", "manifesto"].includes(section.type);
@@ -1031,8 +1032,8 @@
 
     main.innerHTML = "";
     main.append(renderHero(page));
-    page.sections.forEach((section) => {
-      main.append(renderSection(section, data));
+    page.sections.forEach((section, index) => {
+      main.append(renderSection(section, data, index));
     });
   };
 
