@@ -103,6 +103,68 @@
     return icon;
   };
   const classToken = (value) => String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const frameworkTerms = [
+    { key: "reward", patterns: ["Get Rewarded", "Reward", "واكسب", "اكسب"] },
+    { key: "connect", patterns: ["Connect", "العب"] },
+    { key: "compete", patterns: ["Compete", "نافس"] },
+    { key: "rank", patterns: ["Rank", "اترتب"] }
+  ];
+  const frameworkPattern = /(Get Rewarded|Connect|Compete|Rank|Reward|واكسب|اترتب|نافس|العب|اكسب)/g;
+  const frameworkKey = (value) => {
+    const text = String(value || "").trim().toLowerCase();
+    const normalized = text.replace(/[.،]/g, "");
+    if (["connect", "العب"].includes(normalized)) return "connect";
+    if (["compete", "نافس"].includes(normalized)) return "compete";
+    if (["rank", "اترتب"].includes(normalized)) return "rank";
+    if (["reward", "rewards", "get rewarded", "اكسب", "واكسب"].includes(normalized)) return "reward";
+    return "";
+  };
+  const frameworkKeysIn = (value) => {
+    const text = String(value || "");
+    const keys = new Set();
+    frameworkTerms.forEach((term) => {
+      if (term.patterns.some((pattern) => text.includes(pattern))) keys.add(term.key);
+    });
+    return keys;
+  };
+  const isFrameworkText = (value) => frameworkKeysIn(value).size >= 3;
+  const makeFrameworkText = (tag, className, text) => {
+    const node = make(tag, className);
+    if (!isFrameworkText(text)) {
+      node.textContent = text;
+      return node;
+    }
+    node.classList.add("framework-text");
+    let lastIndex = 0;
+    String(text).replace(frameworkPattern, (match, _token, offset) => {
+      if (offset > lastIndex) {
+        node.append(make("span", "framework-separator", text.slice(lastIndex, offset)));
+      }
+      node.append(make("span", `framework-word framework-${frameworkKey(match)}`, match));
+      lastIndex = offset + match.length;
+      return match;
+    });
+    if (lastIndex < text.length) {
+      node.append(make("span", "framework-separator", text.slice(lastIndex)));
+    }
+    return node;
+  };
+  const sectionSemanticClass = (section) => {
+    const source = `${section.id || ""} ${section.type || ""} ${section.eyebrow || ""} ${section.title || ""}`.toLowerCase();
+    if (/safety|fair play|verification|verified|السلامة|اللعب النظيف|التحقق|المؤكدة/.test(source)) return "section-safety-zone";
+    if (/steps|how it works|كيف تعمل/.test(source)) return "section-process-zone";
+    if (/registration|register|forms|questionnaire|cta|التسجيل|سجل|دعوة/.test(source)) return "section-register-zone";
+    if (/faq|questions|الأسئلة/.test(source)) return "section-faq-zone";
+    if (/blog|updates|المدونة|التحديثات/.test(source)) return "section-blog-zone";
+    if (isFrameworkText(section.title) && section.type !== "steps") return "section-framework-zone";
+    if (/activities|what you can play|الأنشطة|ماذا يمكنك/.test(source)) return "section-activities-zone";
+    if (/dawrak|assistant|request flow|notifications|chat|دورك|مساعد|الإشعارات|المحادثة/.test(source)) return "section-dawrak-zone";
+    if (/tournament|competition|challenge|البطولات|المنافسات|مسابقات|تحديات/.test(source)) return "section-tournaments-zone";
+    if (/leaderboard|ranking|rankings|top rank|لوحة الترتيب|الترتيب/.test(source)) return "section-leaderboard-zone";
+    if (/reward|badges|offers|المكافآت|الشارات|العروض/.test(source)) return "section-rewards-zone";
+    if (/venue|venues|places|location|approved|الأماكن|المكان|للاماكن|للأماكن|الموقع/.test(source)) return "section-venues-zone";
+    return "";
+  };
   const canonicalBaseUrl = "https://ai-game-connect.github.io/aigameconnect-website/";
   const routePaths = {
     home: "",
@@ -401,8 +463,8 @@
 
   const sectionHeader = (section) => {
     const block = make("div", "section-header");
-    if (section.eyebrow) block.append(make("p", "eyebrow", section.eyebrow));
-    if (section.title) block.append(make("h2", "", section.title));
+    if (section.eyebrow) block.append(makeFrameworkText("p", "eyebrow", section.eyebrow));
+    if (section.title) block.append(makeFrameworkText("h2", "", section.title));
     if (section.body) block.append(make("p", "section-lede", section.body));
     if (section.note) block.append(make("p", "small-note", section.note));
     return block;
@@ -413,6 +475,8 @@
     card.classList.add(`theme-${iconTheme(item)}`);
     if (item.icon) card.classList.add(`icon-key-${classToken(item.icon)}`);
     if (item.title) card.classList.add(`title-key-${classToken(item.title)}`);
+    const stepKey = frameworkKey(item.title);
+    if (stepKey) card.classList.add("framework-card", `framework-card-${stepKey}`);
     if (item.icon) card.append(renderIcon(item));
     if (item.kicker) card.append(make("p", "card-kicker", item.kicker));
     if (item.title) card.append(make("h3", "", item.title));
@@ -460,8 +524,8 @@
     const container = make("div", "section-container hero-grid");
     const copy = make("div", "hero-copy");
 
-    if (hero.eyebrow) copy.append(make("p", "eyebrow", hero.eyebrow));
-    copy.append(make("h1", "", hero.title));
+    if (hero.eyebrow) copy.append(makeFrameworkText("p", "eyebrow", hero.eyebrow));
+    copy.append(makeFrameworkText("h1", "", hero.title));
     if (hero.body) copy.append(make("p", "hero-lede", hero.body));
     if (hero.differentiator) copy.append(make("p", "differentiator", hero.differentiator));
     if (hero.badge) {
@@ -887,7 +951,7 @@
   };
 
   const renderSection = (section, data) => {
-    const node = make("section", `section reveal section-${section.type || "cards"} ${section.tone || ""}`);
+    const node = make("section", `section reveal section-${section.type || "cards"} ${section.tone || ""} ${sectionSemanticClass(section)}`);
     if (section.id) node.id = section.id;
     const container = make("div", `section-container ${section.layout || ""}`);
     if (section.type !== "signin") {

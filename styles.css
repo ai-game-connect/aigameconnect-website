@@ -365,6 +365,60 @@ summary:focus-visible,
   background: linear-gradient(180deg, var(--soft-blue) 0%, #f6fbff 100%);
 }
 
+.section-framework-zone {
+  background:
+    linear-gradient(135deg, var(--soft-blue) 0%, var(--soft-white) 42%, var(--gold-soft) 100%);
+}
+
+.section-activities-zone,
+.section-blog-zone {
+  background: linear-gradient(180deg, var(--white) 0%, var(--soft-white) 100%);
+}
+
+.section-dawrak-zone {
+  background: linear-gradient(180deg, var(--orange-soft) 0%, var(--white) 100%);
+}
+
+.section-tournaments-zone {
+  background: linear-gradient(180deg, var(--orange-soft) 0%, var(--soft-white) 100%);
+}
+
+.section-leaderboard-zone {
+  background: linear-gradient(180deg, var(--gold-soft) 0%, var(--white) 100%);
+}
+
+.section-rewards-zone {
+  background: linear-gradient(180deg, var(--green-soft) 0%, var(--white) 100%);
+}
+
+.section-venues-zone,
+.section-safety-zone {
+  background: linear-gradient(180deg, var(--green-soft) 0%, var(--soft-white) 100%);
+}
+
+.section-process-zone,
+.section-faq-zone {
+  background: linear-gradient(180deg, var(--soft-blue) 0%, var(--soft-white) 100%);
+}
+
+.section-register-zone {
+  background: linear-gradient(135deg, var(--orange-soft) 0%, var(--soft-white) 54%, var(--soft-blue) 100%);
+}
+
+.section-framework-zone .feature-card,
+.section-dawrak-zone .feature-card,
+.section-tournaments-zone .feature-card,
+.section-leaderboard-zone .table-card,
+.section-leaderboard-zone .feature-card,
+.section-rewards-zone .feature-card,
+.section-venues-zone .feature-card,
+.section-safety-zone .badge-grid span,
+.section-register-zone .feature-card,
+.section-process-zone .steps-list li,
+.section-faq-zone .faq-item {
+  background-color: var(--white);
+}
+
 .section-navy {
   background: var(--navy);
   color: var(--white);
@@ -409,6 +463,72 @@ summary:focus-visible,
   font-size: 0.82rem;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.framework-text {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.18em;
+}
+
+.framework-word {
+  color: var(--framework-color);
+  font-weight: 900;
+}
+
+.framework-connect {
+  --framework-color: var(--blue);
+  --framework-soft: var(--soft-blue);
+  --framework-border: #cfe3ff;
+}
+
+.framework-compete {
+  --framework-color: var(--orange);
+  --framework-soft: var(--orange-soft);
+  --framework-border: #ffd4ad;
+}
+
+.framework-rank {
+  --framework-color: #8a6200;
+  --framework-soft: var(--gold-soft);
+  --framework-border: #ffe5a4;
+}
+
+.framework-reward {
+  --framework-color: #0b7a42;
+  --framework-soft: var(--green-soft);
+  --framework-border: #b9f3d1;
+}
+
+.framework-separator {
+  color: var(--gray);
+}
+
+.eyebrow.framework-text {
+  gap: 5px;
+  padding: 6px;
+  background: var(--white);
+  border-color: rgba(226, 232, 240, 0.96);
+  box-shadow: 0 9px 22px rgba(7, 17, 31, 0.06);
+}
+
+.eyebrow.framework-text .framework-word {
+  min-height: 28px;
+  padding: 4px 8px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--framework-color);
+  background: var(--framework-soft);
+  border: 1px solid var(--framework-border);
+  border-radius: var(--radius);
+}
+
+h1.framework-text,
+h2.framework-text {
+  display: flex;
+  column-gap: 0.16em;
+  row-gap: 0.08em;
 }
 
 body[data-locale="ar"] .eyebrow {
@@ -805,6 +925,45 @@ body[data-page="register"] .section-paths .feature-card,
 .theme-gold:hover::after,
 .theme-gold.is-visible::after {
   animation: shine 1100ms ease;
+}
+
+.framework-card-connect {
+  --framework-color: var(--blue);
+  --framework-soft: var(--soft-blue);
+  --framework-border: #cfe3ff;
+}
+
+.framework-card-compete {
+  --framework-color: var(--orange);
+  --framework-soft: var(--orange-soft);
+  --framework-border: #ffd4ad;
+}
+
+.framework-card-rank {
+  --framework-color: #8a6200;
+  --framework-soft: var(--gold-soft);
+  --framework-border: #ffe5a4;
+}
+
+.framework-card-reward {
+  --framework-color: #0b7a42;
+  --framework-soft: var(--green-soft);
+  --framework-border: #b9f3d1;
+}
+
+.framework-card {
+  border-color: var(--framework-border);
+  background: linear-gradient(180deg, var(--white) 0%, var(--framework-soft) 100%);
+}
+
+.framework-card::before {
+  background: var(--framework-color);
+}
+
+.framework-card .card-icon {
+  color: var(--framework-color);
+  background: var(--framework-soft);
+  border-color: var(--framework-border);
 }
 
 .card-kicker,
