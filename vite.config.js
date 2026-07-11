@@ -12,7 +12,6 @@ const pages = [
   "signin/index.html",
   "privacy/index.html",
   "terms/index.html",
-  "senet/index.html",
   "venues/index.html",
   "rules/index.html",
   "contact/index.html"

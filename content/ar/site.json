@@ -1,6 +1,6 @@
 {
   "name": "AI Game Connect",
   "logoAlt": "AI Game Connect",
-  "logoHeader": "/assets/aigc/ai_game_connect_website_logo_horizontal_light.png",
-  "logoFooter": "/assets/aigc/ai_game_connect_website_logo_horizontal_dark.png"
+  "logoHeader": "/assets/aigc/ai_game_connect_website_logo_horizontal_light.svg",
+  "logoFooter": "/assets/aigc/ai_game_connect_website_logo_horizontal_dark.svg"
 }

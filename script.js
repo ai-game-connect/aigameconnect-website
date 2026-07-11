@@ -85,9 +85,9 @@
   };
   const iconTheme = (item) => {
     const source = `${item.icon || ""} ${item.title || ""}`.toLowerCase();
-    if (/reward|badge|leader|rank|gold|#1|top|rw|lr|bd|cp|vd/.test(source)) return "gold";
-    if (/safe|approved|venue|field|court|trust|safety|ok|fp|tv|shield/.test(source)) return "green";
-    if (/dawrak|request|notification|assistant|orange|rq|in/.test(source)) return "orange";
+    if (/reward|badge|leader|rank|gold|#1|top|points|score|rw|lr|bd|rk|up|lb/.test(source)) return "gold";
+    if (/safe|approved|venue|field|court|trust|safety|ok|fp|tv|shield|green|location|loc|map|vh|vn|av|vs/.test(source)) return "green";
+    if (/compete|competition|tournament|action|dawrak|request|notification|assistant|orange|rq|in|cp|tr|tp/.test(source)) return "orange";
     return "blue";
   };
   const renderIcon = (item) => {
@@ -412,6 +412,7 @@
     const card = make("article", className || "feature-card");
     card.classList.add(`theme-${iconTheme(item)}`);
     if (item.icon) card.classList.add(`icon-key-${classToken(item.icon)}`);
+    if (item.title) card.classList.add(`title-key-${classToken(item.title)}`);
     if (item.icon) card.append(renderIcon(item));
     if (item.kicker) card.append(make("p", "card-kicker", item.kicker));
     if (item.title) card.append(make("h3", "", item.title));
@@ -463,7 +464,12 @@
     copy.append(make("h1", "", hero.title));
     if (hero.body) copy.append(make("p", "hero-lede", hero.body));
     if (hero.differentiator) copy.append(make("p", "differentiator", hero.differentiator));
-    if (hero.badge) copy.append(make("p", "founding-badge", hero.badge));
+    if (hero.badge) {
+      const badge = make("p", "founding-badge");
+      badge.innerHTML = iconLibrary.spark;
+      badge.append(document.createTextNode(hero.badge));
+      copy.append(badge);
+    }
     if (hero.actions) {
       const actionRow = make("div", "hero-actions");
       hero.actions.forEach((action, index) => {
@@ -471,7 +477,12 @@
       });
       copy.append(actionRow);
     }
-    if (hero.trust) copy.append(make("p", "trust-line", hero.trust));
+    if (hero.trust) {
+      const trust = make("p", "trust-line");
+      trust.innerHTML = iconLibrary.shield;
+      trust.append(document.createTextNode(hero.trust));
+      copy.append(trust);
+    }
 
     container.append(copy, renderHeroVisual(hero));
     section.append(container);
