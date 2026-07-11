@@ -507,7 +507,42 @@
     return strip;
   };
 
+  const renderHeroFrameworkVisual = (hero) => {
+    const steps = language === "ar"
+      ? [
+          { key: "connect", label: "العب" },
+          { key: "compete", label: "نافس" },
+          { key: "rank", label: "اترتب" },
+          { key: "reward", label: "واكسب" }
+        ]
+      : [
+          { key: "connect", label: "Connect" },
+          { key: "compete", label: "Compete" },
+          { key: "rank", label: "Rank" },
+          { key: "reward", label: "Reward" }
+        ];
+    const visual = make("div", "hero-visual hero-framework-visual");
+    visual.setAttribute("role", "group");
+    visual.setAttribute("aria-label", hero.visualLabel || (language === "ar" ? "مسار اللعب والمنافسة والترتيب والمكافآت" : "Connect, compete, rank, reward framework"));
+    const stack = make("div", "hero-framework-stack");
+    steps.forEach((step, index) => {
+      const card = make("div", `hero-framework-step framework-step-${step.key}`);
+      card.append(make("span", "framework-step-dot"));
+      card.append(make("strong", "", step.label));
+      stack.append(card);
+      if (index < steps.length - 1) {
+        stack.append(make("span", "framework-step-arrow", "↓"));
+      }
+    });
+    visual.append(stack);
+    return visual;
+  };
+
   const renderHeroVisual = (hero) => {
+    if (pageKey === "home") {
+      return renderHeroFrameworkVisual(hero);
+    }
+
     if (hero.chat) {
       return renderChatMockup(hero.chat, true);
     }

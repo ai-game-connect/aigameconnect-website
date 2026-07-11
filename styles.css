@@ -376,6 +376,19 @@ summary:focus-visible,
   pointer-events: none;
 }
 
+body[data-page="home"] .hero-section {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(47, 128, 255, 0.13), transparent 30%),
+    radial-gradient(circle at 78% 22%, rgba(7, 17, 31, 0.08), transparent 32%),
+    linear-gradient(135deg, #e7eef6 0%, var(--mist) 48%, #f8fafc 100%);
+}
+
+body[data-page="home"] .hero-section::after {
+  opacity: 0.48;
+  filter: blur(24px);
+  animation-duration: 30s;
+}
+
 .section-white {
   background: var(--white);
 }
@@ -586,6 +599,22 @@ h2.framework-text {
   row-gap: 0.08em;
 }
 
+body[data-page="home"] .hero-copy h1.framework-text .framework-word {
+  color: var(--navy);
+}
+
+body[data-page="home"] .hero-copy h1.framework-text .framework-compete {
+  color: #9a4b08;
+}
+
+body[data-page="home"] .hero-copy h1.framework-text .framework-reward {
+  color: #0b6338;
+}
+
+body[data-page="home"] .hero-copy h1.framework-text .framework-separator {
+  color: rgba(7, 17, 31, 0.5);
+}
+
 body[data-locale="ar"] .eyebrow {
   text-transform: none;
 }
@@ -703,6 +732,105 @@ body[data-locale="ar"] .eyebrow {
   gap: 16px;
   padding: 18px;
   isolation: isolate;
+}
+
+.hero-framework-visual {
+  position: relative;
+  min-height: 500px;
+  display: grid;
+  place-items: center;
+  padding: clamp(18px, 4vw, 38px);
+  isolation: isolate;
+}
+
+.hero-framework-visual::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 24% 18%, rgba(47, 128, 255, 0.1), transparent 28%),
+    radial-gradient(circle at 74% 24%, rgba(7, 17, 31, 0.08), transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.74) 0%, rgba(237, 243, 248, 0.9) 100%);
+  border: 1px solid rgba(100, 116, 139, 0.18);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 64px rgba(7, 17, 31, 0.11);
+}
+
+.hero-framework-visual::after {
+  content: "";
+  position: absolute;
+  inset: 44px 0 28px 42px;
+  z-index: -3;
+  background: rgba(217, 226, 236, 0.7);
+  border: 1px solid rgba(100, 116, 139, 0.16);
+  border-radius: var(--radius-lg);
+}
+
+[dir="rtl"] .hero-framework-visual::after {
+  inset: 44px 42px 28px 0;
+}
+
+.hero-framework-stack {
+  width: min(100%, 360px);
+  display: grid;
+  gap: 10px;
+  justify-items: stretch;
+}
+
+.hero-framework-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 12px;
+  min-height: 72px;
+  padding: 16px 18px;
+  color: var(--navy);
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(100, 116, 139, 0.2);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 28px rgba(7, 17, 31, 0.07);
+}
+
+.hero-framework-step strong {
+  font-family: Sora, Manrope, Inter, "Segoe UI", Arial, sans-serif;
+  font-size: 1.18rem;
+  line-height: 1.1;
+}
+
+body[data-locale="ar"] .hero-framework-step strong {
+  font-family: Cairo, "IBM Plex Sans Arabic", Tajawal, "Segoe UI", Arial, sans-serif;
+}
+
+.framework-step-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--blue);
+  box-shadow: 0 0 0 6px rgba(47, 128, 255, 0.1);
+}
+
+.framework-step-compete .framework-step-dot {
+  background: var(--orange);
+  box-shadow: 0 0 0 6px rgba(255, 138, 31, 0.11);
+}
+
+.framework-step-rank .framework-step-dot {
+  background: var(--gold);
+  box-shadow: 0 0 0 6px rgba(246, 196, 79, 0.14);
+}
+
+.framework-step-reward .framework-step-dot {
+  background: var(--green);
+  box-shadow: 0 0 0 6px rgba(36, 194, 106, 0.11);
+}
+
+.framework-step-arrow {
+  justify-self: center;
+  color: #56657a;
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .hero-product-visual::before {
@@ -3160,6 +3288,21 @@ body[data-page="rewards"] .reveal.is-visible .reward-badge-card::after {
   .hero-product-visual {
     min-height: 0;
     padding: 12px;
+  }
+
+  .hero-framework-visual {
+    min-height: 0;
+    padding: 12px;
+  }
+
+  .hero-framework-stack {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .hero-framework-step {
+    min-height: 62px;
+    padding: 13px 14px;
   }
 
   .hero-section::after,
